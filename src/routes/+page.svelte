@@ -1,12 +1,8 @@
 <script lang="ts">
-	import { History } from '$lib/index.js';
+	// import EjemploBasico from './EjemploBasico.svelte';
+	import EjemploPropiedades from './EjemploPropiedades.svelte';
 </script>
 
-<p><History /> Historia</p>
+<!-- <EjemploBasico></EjemploBasico> -->
 
-<style>
-	p {
-		font-size: 28px;
-		color: blue;
-	}
-</style>
+<EjemploPropiedades></EjemploPropiedades>

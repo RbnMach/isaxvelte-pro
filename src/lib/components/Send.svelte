@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.5 22H20.5" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M5 3.5L19 17.5" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,14 +18,14 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20.5 21.25H3.5C3.09 21.25 2.75 21.59 2.75 22C2.75 22.41 3.09 22.75 3.5 22.75H20.5C20.91 22.75 21.25 22.41 21.25 22C21.25 21.59 20.91 21.25 20.5 21.25Z" fill="{color}"/>
 <path d="M5 14.52C5.41 14.52 5.75 14.18 5.75 13.77V5.31L18.47 18.03C18.62 18.18 18.81 18.25 19 18.25C19.19 18.25 19.38 18.18 19.53 18.03C19.82 17.74 19.82 17.26 19.53 16.97L6.81 4.25H15.27C15.68 4.25 16.02 3.91 16.02 3.5C16.02 3.09 15.68 2.75 15.27 2.75H5C4.9 2.75 4.81 2.77 4.71 2.81C4.53 2.88 4.38 3.03 4.31 3.21C4.27 3.31 4.25 3.4 4.25 3.5V13.77C4.25 14.18 4.59 14.52 5 14.52Z" fill="{color}"/>
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M16.59,15.1l2.41,2.41" fill="none" stroke="{color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
   <path d="M5.01,3.49l8.37,8.39" fill="none" stroke="{color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
@@ -31,7 +33,7 @@
   <path d="M3.5,22h17" fill="none" stroke="{color}" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
 </svg>
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M20.4992 22.8002H3.49922C3.09922 22.8002 2.69922 22.5002 2.69922 22.0002C2.69922 21.5002 2.99922 21.2002 3.49922 21.2002H20.4992C20.8992 21.2002 21.2992 21.5002 21.2992 22.0002C21.2992 22.5002 20.8992 22.8002 20.4992 22.8002Z" fill="{color}"/>
 <path d="M18.9984 18.2004C18.7984 18.2004 18.5984 18.1004 18.4984 18.0004L4.49844 4.00039C4.19844 3.70039 4.19844 3.30039 4.49844 3.00039C4.79844 2.70039 5.29844 2.70039 5.59844 3.00039L19.5984 17.0004C19.8984 17.3004 19.8984 17.8004 19.5984 18.1004C19.3984 18.2004 19.1984 18.2004 18.9984 18.2004Z" fill="{color}"/>
@@ -39,7 +41,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20.5 22.75H3.5C3.09 22.75 2.75 22.41 2.75 22C2.75 21.59 3.09 21.25 3.5 21.25H20.5C20.91 21.25 21.25 21.59 21.25 22C21.25 22.41 20.91 22.75 20.5 22.75Z" fill="{color}"/>
 <path d="M18.9995 18.2499C18.8095 18.2499 18.6195 18.1799 18.4695 18.0299L4.46945 4.02994C4.17945 3.73994 4.17945 3.25994 4.46945 2.96994C4.75945 2.67994 5.23945 2.67994 5.52945 2.96994L19.5295 16.9699C19.8195 17.2599 19.8195 17.7399 19.5295 18.0299C19.3795 18.1799 19.1895 18.2499 18.9995 18.2499Z" fill="{color}"/>
@@ -47,7 +49,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M3.5 22H20.5" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M5 3.5L19 17.5" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,5 +66,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

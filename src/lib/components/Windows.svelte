@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 2L12 4V11H22V2Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22L12 20V13H22V22Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -17,7 +19,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8 2.24144L12.8 3.84145C12.33 3.93145 12 4.34146 12 4.82146V10.0015C12 10.5514 12.45 11.0015 13 11.0015H21C21.55 11.0015 22 10.5514 22 10.0015V3.22145C22 2.59145 21.42 2.12144 20.8 2.24144Z" fill="{color}"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8 21.76L12.8 20.16C12.33 20.07 12 19.66 12 19.18V14C12 13.45 12.45 13 13 13H21C21.55 13 22 13.45 22 14V20.78C22 21.41 21.42 21.88 20.8 21.76Z" fill="{color}"/>
@@ -26,7 +28,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 6.03V2L12 4V11H22" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22L12 20V13H22V22Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
@@ -35,7 +37,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 <path fill="{color}" opacity="0.4" d="M27.733 2.987l-10.667 2.133c-0.627 0.12-1.067 0.667-1.067 1.307v6.907c0 0.733 0.6 1.333 1.333 1.333h10.667c0.733 0 1.333-0.6 1.333-1.333v-9.040c0-0.84-0.773-1.467-1.6-1.307z"></path>
 <path fill="{color}" d="M27.733 29.013l-10.667-2.133c-0.627-0.12-1.067-0.667-1.067-1.307v-6.907c0-0.733 0.6-1.333 1.333-1.333h10.667c0.733 0 1.333 0.6 1.333 1.333v9.040c0 0.84-0.773 1.467-1.6 1.307z"></path>
@@ -44,7 +46,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M22 11.7498H12C11.59 11.7498 11.25 11.4098 11.25 10.9998V3.9998C11.25 3.6398 11.5 3.32981 11.85 3.25981L21.85 1.25981C22.07 1.21981 22.3 1.26981 22.47 1.41981C22.64 1.55981 22.74 1.7798 22.74 1.9998V10.9998C22.75 11.4098 22.41 11.7498 22 11.7498ZM12.75 10.2498H21.25V2.91981L12.75 4.61979V10.2498Z" fill="{color}"/>
 <path d="M22 22.75C21.95 22.75 21.9 22.75 21.85 22.74L11.85 20.74C11.5 20.67 11.25 20.36 11.25 20V13C11.25 12.59 11.59 12.25 12 12.25H22C22.41 12.25 22.75 12.59 22.75 13V22C22.75 22.22 22.65 22.44 22.48 22.58C22.34 22.69 22.17 22.75 22 22.75ZM12.75 19.38L21.25 21.08V13.75H12.75V19.38Z" fill="{color}"/>
@@ -53,7 +55,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M22 2L12 4V11H22V2Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M22 22L12 20V13H22V22Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"/>
@@ -71,5 +73,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

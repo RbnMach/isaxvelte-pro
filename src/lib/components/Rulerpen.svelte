@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.47 19V5C21.47 3 20.47 2 18.47 2H14.47C12.47 2 11.47 3 11.47 5V19C11.47 21 12.47 22 14.47 22H18.47C20.47 22 21.47 21 21.47 19Z" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M11.47 6H16.47" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
@@ -20,7 +22,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.4707 2H14.4707C12.9779 2 11.7439 3.28581 11.5105 4.75204C11.467 5.02475 11.6946 5.25 11.9707 5.25H16.4707C16.8807 5.25 17.2207 5.59 17.2207 6C17.2207 6.41 16.8807 6.75 16.4707 6.75H11.9707C11.6946 6.75 11.4707 6.97386 11.4707 7.25V8.75C11.4707 9.02614 11.6946 9.25 11.9707 9.25H14.2807C14.6907 9.25 15.0307 9.59 15.0307 10C15.0307 10.41 14.6907 10.75 14.2807 10.75H11.9707C11.6946 10.75 11.4707 10.9739 11.4707 11.25V12.705C11.4707 12.9792 11.6915 13.2022 11.9657 13.2049L16.4707 13.25C16.8907 13.25 17.2207 13.59 17.2207 14.01C17.2107 14.42 16.8807 14.75 16.4707 14.75C16.4607 14.75 16.4607 14.75 16.4607 14.75L11.9757 14.7051C11.6976 14.7023 11.4707 14.9269 11.4707 15.205V16.75C11.4707 17.0261 11.6946 17.25 11.9707 17.25H15.3707C15.7907 17.25 16.1207 17.59 16.1207 18C16.1207 18.41 15.7907 18.75 15.3707 18.75H11.9707C11.6946 18.75 11.467 18.9753 11.5105 19.248C11.7439 20.7142 12.9779 22 14.4707 22H18.4707C20.1207 22 21.4707 20.66 21.4707 19V5C21.4707 3.34 20.1207 2 18.4707 2Z" fill="{color}"/>
 <path d="M8.4393 4.95V5.75C8.4393 6.02614 8.21544 6.25 7.9393 6.25H3.0293C2.75315 6.25 2.5293 6.02614 2.5293 5.75V4.95C2.5293 3.33 3.8593 2 5.4893 2C7.1093 2 8.4393 3.33 8.4393 4.95Z" fill="{color}"/>
@@ -28,7 +30,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M14.4707 2C12.4707 2 11.4707 3 11.4707 5V19C11.4707 21 12.4707 22 14.4707 22H18.4707C20.4707 22 21.4707 21 21.4707 19V5C21.4707 3 20.4707 2 18.4707 2" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
 <path d="M11.4707 6H16.4707" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
@@ -40,7 +42,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M21.4707 5V19C21.4707 20.66 20.1207 22 18.4707 22H14.4707C12.8107 22 11.4707 20.66 11.4707 19V5C11.4707 3.34 12.8107 2 14.4707 2H18.4707C20.1207 2 21.4707 3.34 21.4707 5Z" fill="{color}"/>
 <path d="M17.2207 6C17.2207 6.41 16.8807 6.75 16.4707 6.75H11.4707V5.25H16.4707C16.8807 5.25 17.2207 5.59 17.2207 6Z" fill="{color}"/>
@@ -52,7 +54,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.4707 22.75H14.4707C12.0507 22.75 10.7207 21.42 10.7207 19V5C10.7207 2.58 12.0507 1.25 14.4707 1.25H18.4707C20.8907 1.25 22.2207 2.58 22.2207 5V19C22.2207 21.42 20.8807 22.75 18.4707 22.75ZM14.4707 2.75C12.8907 2.75 12.2207 3.42 12.2207 5V19C12.2207 20.58 12.8907 21.25 14.4707 21.25H18.4707C20.0507 21.25 20.7207 20.58 20.7207 19V5C20.7207 3.42 20.0507 2.75 18.4707 2.75H14.4707Z" fill="{color}"/>
 <path d="M16.4707 6.75H11.4707C11.0607 6.75 10.7207 6.41 10.7207 6C10.7207 5.59 11.0607 5.25 11.4707 5.25H16.4707C16.8807 5.25 17.2207 5.59 17.2207 6C17.2207 6.41 16.8807 6.75 16.4707 6.75Z" fill="{color}"/>
@@ -64,7 +66,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M21.4707 19V5C21.4707 3 20.4707 2 18.4707 2H14.4707C12.4707 2 11.4707 3 11.4707 5V19C11.4707 21 12.4707 22 14.4707 22H18.4707C20.4707 22 21.4707 21 21.4707 19Z" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
 <path opacity="0.4" d="M11.4707 6H16.4707" stroke="{color}" stroke-width="1.5" stroke-linecap="round"/>
@@ -85,5 +87,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

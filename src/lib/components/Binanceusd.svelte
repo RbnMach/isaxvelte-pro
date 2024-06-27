@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3999 2.4L6.2999 7.5C6.0999 7.7 6.0999 8 6.2999 8.2L7.9999 9.9C8.1999 10.1 8.4999 10.1 8.6999 9.9L13.7999 4.8C13.9999 4.6 13.9999 4.3 13.7999 4.1L12.0999 2.4C11.8999 2.2 11.5999 2.2 11.3999 2.4Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M15.2999 6.2999L6.2999 15.2999C6.0999 15.4999 6.0999 15.7999 6.2999 15.9999L7.9999 17.6999C8.1999 17.8999 8.4999 17.8999 8.6999 17.6999L17.6999 8.6999C17.8999 8.4999 17.8999 8.1999 17.6999 7.9999L15.9999 6.2999C15.7999 6.0999 15.4999 6.0999 15.2999 6.2999Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -17,7 +19,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3996 2.34953L6.24961 7.49953C6.04961 7.69953 6.04961 8.00953 6.24961 8.20953L7.97962 9.93953C8.17962 10.1395 8.48961 10.1395 8.68961 9.93953L13.8396 4.78953C14.0396 4.58953 14.0396 4.27953 13.8396 4.07953L12.1096 2.34953C11.9096 2.15953 11.5996 2.15953 11.3996 2.34953Z" fill="{color}"/>
 <path d="M15.2996 6.25938L6.24961 15.3094C6.04961 15.5094 6.04961 15.8194 6.24961 16.0194L7.97962 17.7494C8.17962 17.9494 8.48961 17.9494 8.68961 17.7494L17.7396 8.69937C17.9396 8.49937 17.9396 8.18937 17.7396 7.98937L16.0096 6.25938C15.8196 6.05938 15.4996 6.05938 15.2996 6.25938Z" fill="{color}"/>
@@ -26,7 +28,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3996 2.35002L6.24961 7.50002C6.04961 7.70002 6.04961 8.01002 6.24961 8.21002L7.97962 9.94002C8.17962 10.14 8.48961 10.14 8.68961 9.94002L13.8396 4.79002C14.0396 4.59002 14.0396 4.28002 13.8396 4.08002L12.1096 2.35002C11.9096 2.16002 11.5996 2.16002 11.3996 2.35002Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12.9496 8.61011L6.24961 15.3101C6.04961 15.5101 6.04961 15.8201 6.24961 16.0201L7.97962 17.7501C8.17962 17.9501 8.48961 17.9501 8.68961 17.7501L17.7396 8.70011C17.9396 8.50011 17.9396 8.19011 17.7396 7.99011L16.0096 6.26011C15.8096 6.06011 15.4996 6.06011 15.2996 6.26011" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -35,7 +37,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 <path fill="{color}" d="M15.199 3.133l-6.853 6.867c-0.267 0.267-0.267 0.68 0 0.947l2.307 2.307c0.267 0.267 0.68 0.267 0.947 0l6.867-6.867c0.267-0.267 0.267-0.68 0-0.947l-2.307-2.307c-0.28-0.253-0.693-0.253-0.96 0z"></path>
 <path fill="{color}" opacity="0.4" d="M20.399 8.347l-12.053 12.053c-0.267 0.267-0.267 0.68 0 0.947l2.307 2.307c0.267 0.267 0.68 0.267 0.947 0l12.067-12.067c0.267-0.267 0.267-0.68 0-0.947l-2.307-2.307c-0.267-0.253-0.693-0.253-0.96 0.013z"></path>
@@ -44,7 +46,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33979 10.8299C8.01979 10.8299 7.69979 10.7099 7.45979 10.4599L5.7298 8.72988C5.2398 8.23988 5.2398 7.44988 5.7298 6.95988L10.8798 1.80988C11.3698 1.31988 12.1598 1.31988 12.6498 1.80988L14.3798 3.53988C14.8698 4.02988 14.8698 4.81988 14.3798 5.30988L9.2298 10.4599C8.9798 10.7099 8.65979 10.8299 8.33979 10.8299ZM6.95979 7.84988L8.33979 9.22988L13.1298 4.43988L11.7498 3.05988L6.95979 7.84988Z" fill="{color}"/>
 <path d="M8.33979 18.64C8.01979 18.64 7.69979 18.52 7.45979 18.27L5.7298 16.54C5.2398 16.05 5.2398 15.26 5.7298 14.77L14.7798 5.72004C15.2698 5.23004 16.0598 5.23004 16.5498 5.72004L18.2798 7.45004C18.7698 7.94004 18.7698 8.73004 18.2798 9.22004L9.2298 18.27C8.9798 18.52 8.65979 18.64 8.33979 18.64ZM6.95979 15.66L8.33979 17.04L17.0398 8.34004L15.6598 6.96004L6.95979 15.66Z" fill="{color}"/>
@@ -53,7 +55,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3996 2.35002L6.24961 7.50002C6.04961 7.70002 6.04961 8.01002 6.24961 8.21002L7.97962 9.94002C8.17962 10.14 8.48961 10.14 8.68961 9.94002L13.8396 4.79002C14.0396 4.59002 14.0396 4.28002 13.8396 4.08002L12.1096 2.35002C11.9096 2.16002 11.5996 2.16002 11.3996 2.35002Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.4" d="M15.2996 6.25986L6.24961 15.3099C6.04961 15.5099 6.04961 15.8199 6.24961 16.0199L7.97962 17.7499C8.17962 17.9499 8.48961 17.9499 8.68961 17.7499L17.7396 8.69986C17.9396 8.49986 17.9396 8.18986 17.7396 7.98986L16.0096 6.25986C15.8196 6.05986 15.4996 6.05986 15.2996 6.25986Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -71,5 +73,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

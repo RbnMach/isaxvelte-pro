@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.79 10.47V17.79C17.79 20.12 15.9 22 13.58 22H6.21C3.89 22 2 20.11 2 17.79V10.47C2 8.14001 3.89 6.26001 6.21 6.26001H13.58C15.9 6.26001 17.79 8.15001 17.79 10.47Z" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M5.5 4V2.25" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -19,7 +21,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 5.12109C5.59 5.12109 5.25 4.78109 5.25 4.37109V2.62109C5.25 2.21109 5.59 1.87109 6 1.87109C6.41 1.87109 6.75 2.21109 6.75 2.62109V4.37109C6.75 4.79109 6.41 5.12109 6 5.12109Z" fill="{color}"/>
 <path d="M10 5.12109C9.59 5.12109 9.25 4.78109 9.25 4.37109V2.62109C9.25 2.21109 9.59 1.87109 10 1.87109C10.41 1.87109 10.75 2.21109 10.75 2.62109V4.37109C10.75 4.79109 10.41 5.12109 10 5.12109Z" fill="{color}"/>
@@ -28,7 +30,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 13.55V10.47C2 8.14001 3.89 6.26001 6.21 6.26001H13.58C15.91 6.26001 17.79 8.15001 17.79 10.47V17.79C17.79 20.12 15.9 22 13.58 22H6.21C3.89 22 2 20.11 2 17.79" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M5.5 4V2.25" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -39,7 +41,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.6" d="M17.79 10.47V12H2V10.47C2 8.15001 3.89 6.26001 6.21 6.26001H13.58C15.9 6.26001 17.79 8.15001 17.79 10.47Z" fill="{color}"/>
 <path opacity="0.4" d="M17.79 12V17.79C17.79 20.11 15.9 22 13.58 22H6.21C3.89 22 2 20.11 2 17.79V12H17.79Z" fill="{color}"/>
@@ -50,7 +52,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.58 22.75H6.21C3.47 22.75 1.25 20.52 1.25 17.79V10.47C1.25 7.73001 3.48 5.51001 6.21 5.51001H13.58C16.32 5.51001 18.54 7.74001 18.54 10.47V17.79C18.54 20.52 16.31 22.75 13.58 22.75ZM6.21 7.01001C4.3 7.01001 2.75 8.56001 2.75 10.47V17.79C2.75 19.7 4.3 21.25 6.21 21.25H13.58C15.49 21.25 17.04 19.7 17.04 17.79V10.47C17.04 8.56001 15.49 7.01001 13.58 7.01001H6.21Z" fill="{color}"/>
 <path d="M5.5 4.75C5.09 4.75 4.75 4.41 4.75 4V2.25C4.75 1.84 5.09 1.5 5.5 1.5C5.91 1.5 6.25 1.84 6.25 2.25V4C6.25 4.41 5.91 4.75 5.5 4.75Z" fill="{color}"/>
@@ -61,7 +63,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.79 10.4698V17.7898C17.79 20.1198 15.9 21.9998 13.58 21.9998H6.21C3.89 21.9998 2 20.1098 2 17.7898V10.4698C2 8.13977 3.89 6.25977 6.21 6.25977H13.58C15.9 6.25977 17.79 8.14977 17.79 10.4698Z" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path opacity="0.34" d="M5.5 4V2.25" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -81,5 +83,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

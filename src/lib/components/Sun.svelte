@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 8.5V3" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 21V15.5" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,7 +28,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 3.75H11.25V8.5C11.25 8.91 11.59 9.25 12 9.25C12.41 9.25 12.75 8.91 12.75 8.5V3.75H14C14.41 3.75 14.75 3.41 14.75 3C14.75 2.59 14.41 2.25 14 2.25H10C9.59 2.25 9.25 2.59 9.25 3C9.25 3.41 9.59 3.75 10 3.75Z" fill="{color}"/>
 <path d="M14 20.25H12.75V15.5C12.75 15.09 12.41 14.75 12 14.75C11.59 14.75 11.25 15.09 11.25 15.5V20.25H10C9.59 20.25 9.25 20.59 9.25 21C9.25 21.41 9.59 21.75 10 21.75H14C14.41 21.75 14.75 21.41 14.75 21C14.75 20.59 14.41 20.25 14 20.25Z" fill="{color}"/>
@@ -38,7 +40,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 8V6.5" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 4V3" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,7 +59,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M10 3.75H11.25V8.5C11.25 8.91 11.59 9.25 12 9.25C12.41 9.25 12.75 8.91 12.75 8.5V3.75H14C14.41 3.75 14.75 3.41 14.75 3C14.75 2.59 14.41 2.25 14 2.25H10C9.59 2.25 9.25 2.59 9.25 3C9.25 3.41 9.59 3.75 10 3.75Z" fill="{color}"/>
 <path opacity="0.4" d="M14 20.25H12.75V15.5C12.75 15.09 12.41 14.75 12 14.75C11.59 14.75 11.25 15.09 11.25 15.5V20.25H10C9.59 20.25 9.25 20.59 9.25 21C9.25 21.41 9.59 21.75 10 21.75H14C14.41 21.75 14.75 21.41 14.75 21C14.75 20.59 14.41 20.25 14 20.25Z" fill="{color}"/>
@@ -69,7 +71,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 9.25C11.59 9.25 11.25 8.91 11.25 8.5V3C11.25 2.59 11.59 2.25 12 2.25C12.41 2.25 12.75 2.59 12.75 3V8.5C12.75 8.91 12.41 9.25 12 9.25Z" fill="{color}"/>
 <path d="M12 21.75C11.59 21.75 11.25 21.41 11.25 21V15.5C11.25 15.09 11.59 14.75 12 14.75C12.41 14.75 12.75 15.09 12.75 15.5V21C12.75 21.41 12.41 21.75 12 21.75Z" fill="{color}"/>
@@ -87,7 +89,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.5 12C15.5 12.64 15.33 13.23 15.03 13.75C14.42 14.8 13.29 15.5 12 15.5C10.71 15.5 9.58 14.8 8.97 13.75C8.67 13.23 8.5 12.64 8.5 12C8.5 11.36 8.67 10.77 8.97 10.25C9.58 9.2 10.71 8.5 12 8.5C13.29 8.5 14.42 9.2 15.03 10.25C15.33 10.77 15.5 11.36 15.5 12Z" stroke="{color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 <g opacity="0.4">
@@ -116,5 +118,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

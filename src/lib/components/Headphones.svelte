@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 12V7.21997" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.5 22V19" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -21,7 +23,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 12.75C8.09 12.75 7.75 12.41 7.75 12V6C7.75 5.59 8.09 5.25 8.5 5.25C8.91 5.25 9.25 5.59 9.25 6V12C9.25 12.41 8.91 12.75 8.5 12.75Z" fill="{color}"/>
 <path d="M8.5 22.75C8.09 22.75 7.75 22.41 7.75 22V18C7.75 17.59 8.09 17.25 8.5 17.25C8.91 17.25 9.25 17.59 9.25 18V22C9.25 22.41 8.91 22.75 8.5 22.75Z" fill="{color}"/>
@@ -34,7 +36,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 12V7.21997" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M8.5 22V19" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,7 +50,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M8.5 12.75C8.09 12.75 7.75 12.41 7.75 12V6C7.75 5.59 8.09 5.25 8.5 5.25C8.91 5.25 9.25 5.59 9.25 6V12C9.25 12.41 8.91 12.75 8.5 12.75Z" fill="{color}"/>
 <path opacity="0.4" d="M8.5 22.75C8.09 22.75 7.75 22.41 7.75 22V18C7.75 17.59 8.09 17.25 8.5 17.25C8.91 17.25 9.25 17.59 9.25 18V22C9.25 22.41 8.91 22.75 8.5 22.75Z" fill="{color}"/>
@@ -61,7 +63,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.5 12.75C8.09 12.75 7.75 12.41 7.75 12V7.21997C7.75 6.80997 8.09 6.46997 8.5 6.46997C8.91 6.46997 9.25 6.80997 9.25 7.21997V12C9.25 12.41 8.91 12.75 8.5 12.75Z" fill="{color}"/>
 <path d="M8.5 22.75C8.09 22.75 7.75 22.41 7.75 22V19C7.75 18.59 8.09 18.25 8.5 18.25C8.91 18.25 9.25 18.59 9.25 19V22C9.25 22.41 8.91 22.75 8.5 22.75Z" fill="{color}"/>
@@ -74,7 +76,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.4" d="M15.5 21.9998V7.21973" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.0998 5.29999C10.0998 5.78999 9.89982 6.25001 9.56982 6.57001C9.24982 6.90001 8.7998 7.09998 8.2998 7.09998H6.0498C6.3298 6.72998 6.49982 6.25 6.49982 5.75V4.84998C6.49982 4.34998 6.3298 3.87 6.0498 3.5H8.2998C9.2898 3.5 10.0998 4.30999 10.0998 5.29999Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -98,5 +100,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>

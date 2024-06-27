@@ -1,14 +1,16 @@
 <script lang="ts">
-	export let classes = '';
 	export let color = 'currentColor';
-	export let type: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
+	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
 	export let size = '1em';
-	export let axis_y = '-0.13em';
+	export let axis_y = '-0.12em';
 	export let axis_x = '0';
+	export let flip_x = false;
+	export let flip_y = false;
+	export let rotate = 0;	
 </script>
 
-<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x};" class={classes}>
-	{#if type == 'linear'}
+<span style="width: {size}; height: {size}; bottom: {axis_y}; left: {axis_x}; transform: rotate({rotate}deg);" class:horizontal-reverted={flip_x} class:vertical-reverted={flip_y}>
+	{#if variant == 'linear'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 5L7.6 2L2 6L6.4 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 5L16.4 2L22 6L17.6 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -18,7 +20,7 @@
 </svg>
 
 	{/if}
-	{#if type == 'bold'}
+	{#if variant == 'bold'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.9994 6.00127L6.43936 10.0013L3.18936 7.80126C2.60936 7.41126 2.59938 6.57128 3.16938 6.16128L6.99936 3.40127C7.33936 3.16127 7.79938 3.15128 8.13938 3.38128L11.9994 6.00127Z" fill="{color}"/>
 <path d="M20.81 7.79881L17.56 9.99882L12 5.99882L15.86 3.38883C16.21 3.15883 16.66 3.15882 17 3.40882L20.83 6.16883C21.4 6.56883 21.39 7.40881 20.81 7.79881Z" fill="{color}"/>
@@ -28,7 +30,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'broken'}
+	{#if variant == 'broken'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 5L7.56 2L2 6L6.44 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 5L16.44 2L22 6L17.56 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -39,7 +41,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'bulk'}
+	{#if variant == 'bulk'}
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 <path fill="{color}" opacity="0.4" d="M15.999 8l-7.413 5.333-4.333-2.933c-0.773-0.52-0.787-1.64-0.027-2.187l5.107-3.68c0.453-0.32 1.067-0.333 1.52-0.027l5.147 3.493z"></path>
 <path fill="{color}" opacity="0.4" d="M27.747 10.4l-4.333 2.933-7.413-5.333 5.147-3.48c0.467-0.307 1.067-0.307 1.52 0.027l5.107 3.68c0.76 0.533 0.747 1.653-0.027 2.173z"></path>
@@ -49,7 +51,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'outline'}
+	{#if variant == 'outline'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.44 9.75009C6.29 9.75009 6.14999 9.71009 6.01999 9.62009L1.57999 6.62009C1.37999 6.48009 1.25 6.2501 1.25 6.0101C1.25 5.7601 1.36 5.53011 1.56 5.39011L7.12 1.39011C7.38 1.21011 7.72001 1.2001 7.98001 1.3801L12.42 4.3801C12.62 4.5201 12.75 4.75008 12.75 4.99008C12.75 5.24008 12.64 5.47008 12.44 5.61008L6.88 9.61008C6.75 9.70008 6.6 9.75009 6.44 9.75009ZM3.31 5.98011L6.42999 8.09009L10.69 5.02008L7.57001 2.9101L3.31 5.98011Z" fill="{color}"/>
 <path d="M17.5596 9.75017C17.4096 9.75017 17.2496 9.70016 17.1196 9.61016L11.5596 5.61016C11.3596 5.47016 11.2396 5.23016 11.2496 4.99016C11.2496 4.74016 11.3796 4.52018 11.5796 4.38018L16.0196 1.38018C16.2796 1.21018 16.6196 1.21019 16.8796 1.39019L22.4396 5.39019C22.6396 5.53019 22.7596 5.77018 22.7496 6.01018C22.7496 6.26018 22.6196 6.48017 22.4196 6.62017L17.9796 9.62017C17.8496 9.71017 17.6996 9.75017 17.5596 9.75017ZM13.3096 5.02016L17.5696 8.09017L20.6896 5.98018L16.4296 2.91018L13.3096 5.02016Z" fill="{color}"/>
@@ -59,7 +61,7 @@
 </svg>
 
 	{/if}										
-	{#if type == 'twotone'}
+	{#if variant == 'twotone'}
 		<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 5L7.56 2L2 6L6.44 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M12 5L16.44 2L22 6L17.56 9L12 5Z" stroke="{color}" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,5 +80,11 @@
 		stroke: currentColor;
 		fill: currentColor;
 		position: relative;
+	}	
+	.horizontal-reverted {
+		transform: scale(-1, 1);
+	}
+	.vertical-reverted {
+		transform: scale(1, -1);
 	}
 </style>
