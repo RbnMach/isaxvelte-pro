@@ -997,7 +997,7 @@ import Youtube from '$lib/Youtube.svelte'
 import Zel from '$lib/Zel.svelte'
 import Zoom from '$lib/Zoom.svelte'
 
-export const lisIcons = {
+export const listIcons = {
    "Aave": Aave,
    "Activity": Activity,
    "Add": Add,
