@@ -1,10 +1,10 @@
 <script lang="ts">
-	import {Bank} from '$lib/index.js';
+	import Bank from '$lib/Bank.svelte';
 </script>
 
 <p>
 	<Bank
-		type="bulk"
+		variant="bulk"
 		size="2em"
 		axis_x="5px"
 		axis_y="-10px"
