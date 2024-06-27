@@ -1,12 +1,12 @@
 <script lang="ts">
-	import History from '$lib/History.svelte';
+	import { History } from '$lib/index.js';
 </script>
 
-<p><History/> Historia</p>
+<p><History /> Historia</p>
 
 <style>
-	p{
-		font-size: 24px;
-		color:blue;
+	p {
+		font-size: 28px;
+		color: blue;
 	}
 </style>
