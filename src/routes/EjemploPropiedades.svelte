@@ -4,13 +4,13 @@
 
 <p>
 	<Bank
-		variant="bulk"
+		variant="bulk"		
 		size="2em"
 		axis_x="5px"
 		axis_y="-10px"
 		color="rgb(255, 55, 0)"
 		rotate={15}
-	/>Bank
+	/> Bank
 </p>
 
 <style>

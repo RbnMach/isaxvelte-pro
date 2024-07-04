@@ -1,8 +1,8 @@
 <script lang="ts">
 	export let color = 'currentColor';
 	export let variant: 'linear' | 'bold' | 'broken' | 'bulk' | 'outline' | 'twotone' = 'linear';
-	export let size = '1em';
-	export let axis_y = '-0.12em';
+	export let size = '1.1em';
+	export let axis_y = '-0.13em';
 	export let axis_x = '0';
 	export let flip_x = false;
 	export let flip_y = false;
