@@ -1,12 +1,16 @@
 <a href='https://ko-fi.com/rubenmach' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-[Preview Isaxvelte-Pro](https://isaxvelte-pro.vercel.app)
-
 # Iconsax for Svelte
 
 This is an icon library for Svelte based on [iconsax](https://iconsax.io/). These icons are adapted to inherit the colors and sizes, you can use it as if it were a letter font.
 
 Take advantage of [Sveltekit](https://kit.svelte.dev) to be able to use the icons from [iconsax](https://iconsax.io/) with Isaxvelte-Pro 😁👌.
+
+<div style="text-align:center;margin-top: 40px">
+  <a href="https://isaxvelte-pro.vercel.app" target="_blank" rel="noopener noreferrer" style="padding: 15px 35px; font-size: 18px; border-radius: 5px; border: none; background-color: #0070f3; color: white;">
+      Ver preview Isaxvelte-Pro
+  </a>
+</div>
 
 ## Install the library
 
