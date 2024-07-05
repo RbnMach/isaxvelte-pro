@@ -997,1003 +997,3997 @@ import Youtube from '$lib/Youtube.svelte'
 import Zel from '$lib/Zel.svelte'
 import Zoom from '$lib/Zoom.svelte'
 
-export const listIcons = {
-   Aave: Aave,
-   Activity: Activity,
-   Add: Add,
-   Addcircle: Addcircle,
-   Additem: Additem,
-   Addsquare: Addsquare,
-   Airdrop: Airdrop,
-   Airplane: Airplane,
-   Airplanesquare: Airplanesquare,
-   Airpod: Airpod,
-   Airpods: Airpods,
-   Alarm: Alarm,
-   Alignbottom: Alignbottom,
-   Alignhorizontally: Alignhorizontally,
-   Alignleft: Alignleft,
-   Alignright: Alignright,
-   Aligntop: Aligntop,
-   Alignvertically: Alignvertically,
-   Android: Android,
-   Ankr: Ankr,
-   Apple: Apple,
-   Aquarius: Aquarius,
-   Archive: Archive,
-   Archive1: Archive1,
-   Archive2: Archive2,
-   Archiveadd: Archiveadd,
-   Archivebook: Archivebook,
-   Archiveminus: Archiveminus,
-   Archiveslash: Archiveslash,
-   Archivetick: Archivetick,
-   Arrangecircle: Arrangecircle,
-   Arrangecircle2: Arrangecircle2,
-   Arrangesquare: Arrangesquare,
-   Arrangesquare2: Arrangesquare2,
-   Arrow: Arrow,
-   Arrow2: Arrow2,
-   Arrow3: Arrow3,
-   Arrowbottom: Arrowbottom,
-   Arrowcircledown: Arrowcircledown,
-   Arrowcircleleft: Arrowcircleleft,
-   Arrowcircleright: Arrowcircleright,
-   Arrowcircleup: Arrowcircleup,
-   Arrowdown: Arrowdown,
-   Arrowdown1: Arrowdown1,
-   Arrowdown2: Arrowdown2,
-   Arrowleft: Arrowleft,
-   Arrowleft1: Arrowleft1,
-   Arrowleft2: Arrowleft2,
-   Arrowleft3: Arrowleft3,
-   Arrowright: Arrowright,
-   Arrowright1: Arrowright1,
-   Arrowright2: Arrowright2,
-   Arrowright3: Arrowright3,
-   Arrowsquare: Arrowsquare,
-   Arrowsquaredown: Arrowsquaredown,
-   Arrowsquareleft: Arrowsquareleft,
-   Arrowsquareright: Arrowsquareright,
-   Arrowsquareup: Arrowsquareup,
-   Arrowswap: Arrowswap,
-   Arrowswaphorizontal: Arrowswaphorizontal,
-   Arrowup: Arrowup,
-   Arrowup1: Arrowup1,
-   Arrowup2: Arrowup2,
-   Arrowup3: Arrowup3,
-   Attachcircle: Attachcircle,
-   Attachsquare: Attachsquare,
-   Audiosquare: Audiosquare,
-   Augur: Augur,
-   Autobrightness: Autobrightness,
-   Autonio: Autonio,
-   Avalanche: Avalanche,
-   Award: Award,
-   Backsquare: Backsquare,
-   Backward: Backward,
-   Backward10seconds: Backward10seconds,
-   Backward15seconds: Backward15seconds,
-   Backward5seconds: Backward5seconds,
-   Backwarditem: Backwarditem,
-   Bag: Bag,
-   Bag2: Bag2,
-   Bagcross: Bagcross,
-   Bagcross1: Bagcross1,
-   Baghappy: Baghappy,
-   Bagtick: Bagtick,
-   Bagtick2: Bagtick2,
-   Bagtimer: Bagtimer,
-   Bank: Bank,
-   Barcode: Barcode,
-   Battery3full: Battery3full,
-   Batterycharging: Batterycharging,
-   Batterydisable: Batterydisable,
-   Batteryempty: Batteryempty,
-   Batteryempty1: Batteryempty1,
-   Batteryfull: Batteryfull,
-   Be: Be,
-   Bezier: Bezier,
-   Bill: Bill,
-   Binancecoin: Binancecoin,
-   Binanceusd: Binanceusd,
-   Bitcoin: Bitcoin,
-   Bitcoincard: Bitcoincard,
-   Bitcoinconvert: Bitcoinconvert,
-   Bitcoinrefresh: Bitcoinrefresh,
-   Blend: Blend,
-   Blend2: Blend2,
-   Blogger: Blogger,
-   Bluetooth: Bluetooth,
-   Bluetooth2: Bluetooth2,
-   Bluetoothcircle: Bluetoothcircle,
-   Bluetoothrectangle: Bluetoothrectangle,
-   Blur: Blur,
-   Book: Book,
-   Book1: Book1,
-   Bookmark: Bookmark,
-   Bookmark2: Bookmark2,
-   Booksaved: Booksaved,
-   Booksquare: Booksquare,
-   Bootstrap: Bootstrap,
-   Box: Box,
-   Box1: Box1,
-   Box2: Box2,
-   Boxadd: Boxadd,
-   Boxremove: Boxremove,
-   Boxsearch: Boxsearch,
-   Boxtick: Boxtick,
-   Boxtime: Boxtime,
-   Briefcase: Briefcase,
-   Brifecasecross: Brifecasecross,
-   Brifecasetick: Brifecasetick,
-   Brifecasetimer: Brifecasetimer,
-   Broom: Broom,
-   Brush: Brush,
-   Brush1: Brush1,
-   Brush2: Brush2,
-   Brush3: Brush3,
-   Brush4: Brush4,
-   Bubble: Bubble,
-   Bucket: Bucket,
-   Bucketcircle: Bucketcircle,
-   Bucketsquare: Bucketsquare,
-   Building: Building,
-   Building3: Building3,
-   Building4: Building4,
-   Buildings: Buildings,
-   Buildings2: Buildings2,
-   Buliding: Buliding,
-   Bus: Bus,
-   Buycrypto: Buycrypto,
-   Cake: Cake,
-   Calculator: Calculator,
-   Calendar: Calendar,
-   Calendar1: Calendar1,
-   Calendar2: Calendar2,
-   Calendaradd: Calendaradd,
-   Calendarcircle: Calendarcircle,
-   Calendaredit: Calendaredit,
-   Calendarremove: Calendarremove,
-   Calendarsearch: Calendarsearch,
-   Calendartick: Calendartick,
-   Call: Call,
-   Calladd: Calladd,
-   Callcalling: Callcalling,
-   Callincoming: Callincoming,
-   Callminus: Callminus,
-   Calloutgoing: Calloutgoing,
-   Callreceived: Callreceived,
-   Callremove: Callremove,
-   Callslash: Callslash,
-   Camera: Camera,
-   Cameraslash: Cameraslash,
-   Candle: Candle,
-   Candle2: Candle2,
-   Car: Car,
-   Card: Card,
-   Cardadd: Cardadd,
-   Cardano: Cardano,
-   Cardcoin: Cardcoin,
-   Cardedit: Cardedit,
-   Cardpos: Cardpos,
-   Cardreceive: Cardreceive,
-   Cardremove: Cardremove,
-   Cardremove1: Cardremove1,
-   Cards: Cards,
-   Cardsend: Cardsend,
-   Cardslash: Cardslash,
-   Cardtick: Cardtick,
-   Cardtick1: Cardtick1,
-   Category: Category,
-   Category2: Category2,
-   Cd: Cd,
-   Celo: Celo,
-   Celsius: Celsius,
-   Chainlink: Chainlink,
-   Chart: Chart,
-   Chart1: Chart1,
-   Chart2: Chart2,
-   Chart21: Chart21,
-   Chart3: Chart3,
-   Chartfail: Chartfail,
-   Chartsquare: Chartsquare,
-   Chartsuccess: Chartsuccess,
-   Check: Check,
-   Chrome: Chrome,
-   Civic: Civic,
-   Clipboard: Clipboard,
-   Clipboardclose: Clipboardclose,
-   Clipboardexport: Clipboardexport,
-   Clipboardimport: Clipboardimport,
-   Clipboardtext: Clipboardtext,
-   Clipboardtick: Clipboardtick,
-   Clock: Clock,
-   Clock1: Clock1,
-   Closecircle: Closecircle,
-   Closesquare: Closesquare,
-   Cloud: Cloud,
-   Cloudadd: Cloudadd,
-   Cloudchange: Cloudchange,
-   Cloudconnection: Cloudconnection,
-   Cloudcross: Cloudcross,
-   Clouddrizzle: Clouddrizzle,
-   Cloudfog: Cloudfog,
-   Cloudlightning: Cloudlightning,
-   Cloudminus: Cloudminus,
-   Cloudnotif: Cloudnotif,
-   Cloudplus: Cloudplus,
-   Cloudremove: Cloudremove,
-   Cloudsnow: Cloudsnow,
-   Cloudsunny: Cloudsunny,
-   Code: Code,
-   Code1: Code1,
-   Codecircle: Codecircle,
-   Coffee: Coffee,
-   Coin: Coin,
-   Coin1: Coin1,
-   Colorfilter: Colorfilter,
-   Colorssquare: Colorssquare,
-   Colorswatch: Colorswatch,
-   Command: Command,
-   Commandsquare: Commandsquare,
-   Component: Component,
-   Computing: Computing,
-   Convert: Convert,
-   Convert3dcube: Convert3dcube,
-   Convertcard: Convertcard,
-   Convertshape: Convertshape,
-   Convertshape2: Convertshape2,
-   Copy: Copy,
-   Copyright: Copyright,
-   Copysuccess: Copysuccess,
-   Courthouse: Courthouse,
-   Cpu: Cpu,
-   Cpucharge: Cpucharge,
-   Cpusetting: Cpusetting,
-   Creativecommons: Creativecommons,
-   Crop: Crop,
-   Crown: Crown,
-   Crown1: Crown1,
-   Css3: Css3,
-   Cube3d: Cube3d,
-   Cubescan3d: Cubescan3d,
-   Cup: Cup,
-   Dai: Dai,
-   Danger: Danger,
-   Dash: Dash,
-   Data: Data,
-   Data2: Data2,
-   Decred: Decred,
-   Dent: Dent,
-   Designtools: Designtools,
-   Devicemessage: Devicemessage,
-   Devices: Devices,
-   Diagram: Diagram,
-   Diamonds: Diamonds,
-   Direct: Direct,
-   Directboxdefault: Directboxdefault,
-   Directboxnotif: Directboxnotif,
-   Directboxreceive: Directboxreceive,
-   Directboxsend: Directboxsend,
-   Directdown: Directdown,
-   Directinbox: Directinbox,
-   Directleft: Directleft,
-   Directnormal: Directnormal,
-   Directnotification: Directnotification,
-   Directright: Directright,
-   Directsend: Directsend,
-   Directup: Directup,
-   Discountcircle: Discountcircle,
-   Discountshape: Discountshape,
-   Discover: Discover,
-   Discover1: Discover1,
-   Dislike: Dislike,
-   Document: Document,
-   Document1: Document1,
-   Documentcloud: Documentcloud,
-   Documentcode: Documentcode,
-   Documentcode2: Documentcode2,
-   Documentcopy: Documentcopy,
-   Documentdownload: Documentdownload,
-   Documentfavorite: Documentfavorite,
-   Documentfilter: Documentfilter,
-   Documentforward: Documentforward,
-   Documentlike: Documentlike,
-   Documentnormal: Documentnormal,
-   Documentprevious: Documentprevious,
-   Documentsketch: Documentsketch,
-   Documenttext: Documenttext,
-   Documenttext1: Documenttext1,
-   Documentupload: Documentupload,
-   Dollarcircle: Dollarcircle,
-   Dollarsquare: Dollarsquare,
-   Dribbble: Dribbble,
-   Driver: Driver,
-   Driver2: Driver2,
-   Driverrefresh: Driverrefresh,
-   Driving: Driving,
-   Drop: Drop,
-   Dropbox: Dropbox,
-   Edit: Edit,
-   Edit2: Edit2,
-   Educare: Educare,
-   Electricity: Electricity,
-   Element1: Element1,
-   Element2: Element2,
-   Element3: Element3,
-   Element4: Element4,
-   Elementequal: Elementequal,
-   Elementplus: Elementplus,
-   Emercoin: Emercoin,
-   Emojihappy: Emojihappy,
-   Emojinormal: Emojinormal,
-   Emojisad: Emojisad,
-   Emptywallet: Emptywallet,
-   Emptywalletadd: Emptywalletadd,
-   Emptywalletchange: Emptywalletchange,
-   Emptywalletremove: Emptywalletremove,
-   Emptywallettick: Emptywallettick,
-   Emptywallettime: Emptywallettime,
-   Enjincoin: Enjincoin,
-   Eos: Eos,
-   Eraser: Eraser,
-   Eraser1: Eraser1,
-   Ethereum: Ethereum,
-   Ethereumclassic: Ethereumclassic,
-   Export: Export,
-   Export1: Export1,
-   Export2: Export2,
-   Export3: Export3,
-   Externaldrive: Externaldrive,
-   Eye: Eye,
-   Eyeslash: Eyeslash,
-   Facebook: Facebook,
-   Fatrows: Fatrows,
-   Favoritechart: Favoritechart,
-   Figma: Figma,
-   Figma1: Figma1,
-   Filter: Filter,
-   Filteradd: Filteradd,
-   Filteredit: Filteredit,
-   Filterremove: Filterremove,
-   Filtersearch: Filtersearch,
-   Filtersquare: Filtersquare,
-   Filtertick: Filtertick,
-   Fingercricle: Fingercricle,
-   Fingerscan: Fingerscan,
-   Firstline: Firstline,
-   Flag: Flag,
-   Flag2: Flag2,
-   Flash: Flash,
-   Flash1: Flash1,
-   Flashcircle: Flashcircle,
-   Flashcircle1: Flashcircle1,
-   Flashslash: Flashslash,
-   Folder: Folder,
-   Folder2: Folder2,
-   Folderadd: Folderadd,
-   Foldercloud: Foldercloud,
-   Folderconnection: Folderconnection,
-   Foldercross: Foldercross,
-   Folderfavorite: Folderfavorite,
-   Folderminus: Folderminus,
-   Folderopen: Folderopen,
-   Forbidden: Forbidden,
-   Forbidden2: Forbidden2,
-   Formatcircle: Formatcircle,
-   Formatsquare: Formatsquare,
-   Forward: Forward,
-   Forward10seconds: Forward10seconds,
-   Forward15seconds: Forward15seconds,
-   Forward5seconds: Forward5seconds,
-   Forwarditem: Forwarditem,
-   Forwardsquare: Forwardsquare,
-   Framer: Framer,
-   Ftxtoken: Ftxtoken,
-   Gallery: Gallery,
-   Galleryadd: Galleryadd,
-   Galleryedit: Galleryedit,
-   Galleryexport: Galleryexport,
-   Galleryfavorite: Galleryfavorite,
-   Galleryimport: Galleryimport,
-   Galleryremove: Galleryremove,
-   Galleryslash: Galleryslash,
-   Gallerytick: Gallerytick,
-   Game: Game,
-   Gameboy: Gameboy,
-   Gasstation: Gasstation,
-   Gemini: Gemini,
-   Gemini2: Gemini2,
-   Ghost: Ghost,
-   Gift: Gift,
-   Glass: Glass,
-   Glass1: Glass1,
-   Global: Global,
-   Globaledit: Globaledit,
-   Globalrefresh: Globalrefresh,
-   Globalsearch: Globalsearch,
-   Google: Google,
-   Googledrive: Googledrive,
-   Googleplay: Googleplay,
-   Gps: Gps,
-   Gpsslash: Gpsslash,
-   Grammerly: Grammerly,
-   Graph: Graph,
-   Grid1: Grid1,
-   Grid2: Grid2,
-   Grid3: Grid3,
-   Grid4: Grid4,
-   Grid5: Grid5,
-   Grid6: Grid6,
-   Grid7: Grid7,
-   Grid8: Grid8,
-   Grid9: Grid9,
-   Gridedit: Gridedit,
-   Grideraser: Grideraser,
-   Gridlock: Gridlock,
-   Group: Group,
-   Happyemoji: Happyemoji,
-   Harmony: Harmony,
-   Hashtag: Hashtag,
-   Hashtag1: Hashtag1,
-   Hashtagdown: Hashtagdown,
-   Hashtagup: Hashtagup,
-   Headphone: Headphone,
-   Headphones: Headphones,
-   Health: Health,
-   Heart: Heart,
-   Heartadd: Heartadd,
-   Heartcircle: Heartcircle,
-   Heartedit: Heartedit,
-   Heartremove: Heartremove,
-   Heartsearch: Heartsearch,
-   Heartslash: Heartslash,
-   Hearttick: Hearttick,
-   Hederahashgraph: Hederahashgraph,
-   Hex: Hex,
-   Hierarchy: Hierarchy,
-   Hierarchy2: Hierarchy2,
-   Hierarchy3: Hierarchy3,
-   Hierarchysquare: Hierarchysquare,
-   Hierarchysquare2: Hierarchysquare2,
-   Hierarchysquare3: Hierarchysquare3,
-   History: History,
-   Home: Home,
-   Home1: Home1,
-   Home2: Home2,
-   Homehashtag: Homehashtag,
-   Hometrenddown: Hometrenddown,
-   Hometrendup: Hometrendup,
-   Homewifi: Homewifi,
-   Hospital: Hospital,
-   House: House,
-   House2: House2,
-   Html5: Html5,
-   Huobitoken: Huobitoken,
-   Icon: Icon,
-   Illustrator: Illustrator,
-   Image: Image,
-   Import: Import,
-   Import1: Import1,
-   Import2: Import2,
-   Import3: Import3,
-   Infocircle: Infocircle,
-   Information: Information,
-   Instagram: Instagram,
-   Iost: Iost,
-   Javascript: Javascript,
-   Js: Js,
-   Judge: Judge,
-   Kanban: Kanban,
-   Key: Key,
-   Keyboard: Keyboard,
-   Keyboardopen: Keyboardopen,
-   Keysquare: Keysquare,
-   Kybernetwork: Kybernetwork,
-   Lamp: Lamp,
-   Lamp1: Lamp1,
-   Lampcharge: Lampcharge,
-   Lampon: Lampon,
-   Lampslash: Lampslash,
-   Languagecircle: Languagecircle,
-   Languagesquare: Languagesquare,
-   Layer: Layer,
-   Level: Level,
-   Lifebuoy: Lifebuoy,
-   Like: Like,
-   Like1: Like1,
-   Likedislike: Likedislike,
-   Likeshapes: Likeshapes,
-   Liketag: Liketag,
-   Link: Link,
-   Link1: Link1,
-   Link2: Link2,
-   Link21: Link21,
-   Linkcircle: Linkcircle,
-   Linksquare: Linksquare,
-   Litecoin: Litecoin,
-   Location: Location,
-   Locationadd: Locationadd,
-   Locationcross: Locationcross,
-   Locationminus: Locationminus,
-   Locationslash: Locationslash,
-   Locationtick: Locationtick,
-   Lock: Lock,
-   Lock1: Lock1,
-   Lockcircle: Lockcircle,
-   Lockslash: Lockslash,
-   Login: Login,
-   Login1: Login1,
-   Logout: Logout,
-   Logout1: Logout1,
-   Lovely: Lovely,
-   Magicpen: Magicpen,
-   Magicstar: Magicstar,
-   Maincomponent: Maincomponent,
-   Maker: Maker,
-   Man: Man,
-   Map: Map,
-   Map1: Map1,
-   Mask: Mask,
-   Mask1: Mask1,
-   Mask2: Mask2,
-   Math: Math,
-   Maximize: Maximize,
-   Maximize1: Maximize1,
-   Maximize2: Maximize2,
-   Maximize3: Maximize3,
-   Maximize4: Maximize4,
-   Maximize5: Maximize5,
-   Maximizecircle: Maximizecircle,
-   Medal: Medal,
-   Medalstar: Medalstar,
-   Menu: Menu,
-   Menu1: Menu1,
-   Menuboard: Menuboard,
-   Message: Message,
-   Message2: Message2,
-   Messageadd: Messageadd,
-   Messageadd1: Messageadd1,
-   Messagecircle: Messagecircle,
-   Messageedit: Messageedit,
-   Messagefavorite: Messagefavorite,
-   Messageminus: Messageminus,
-   Messagenotif: Messagenotif,
-   Messageprogramming: Messageprogramming,
-   Messagequestion: Messagequestion,
-   Messageremove: Messageremove,
-   Messages: Messages,
-   Messages1: Messages1,
-   Messages2: Messages2,
-   Messages3: Messages3,
-   Messagesearch: Messagesearch,
-   Messagesquare: Messagesquare,
-   Messagetext: Messagetext,
-   Messagetext1: Messagetext1,
-   Messagetick: Messagetick,
-   Messagetime: Messagetime,
-   Messenger: Messenger,
-   Microphone: Microphone,
-   Microphone2: Microphone2,
-   Microphoneslash: Microphoneslash,
-   Microphoneslash1: Microphoneslash1,
-   Microscope: Microscope,
-   Milk: Milk,
-   Minimusicsqaure: Minimusicsqaure,
-   Minus: Minus,
-   Minuscirlce: Minuscirlce,
-   Minussquare: Minussquare,
-   Mirror: Mirror,
-   Mirroringscreen: Mirroringscreen,
-   Mobile: Mobile,
-   Mobileprogramming: Mobileprogramming,
-   Monero: Monero,
-   Money: Money,
-   Money2: Money2,
-   Money3: Money3,
-   Money4: Money4,
-   Moneyadd: Moneyadd,
-   Moneychange: Moneychange,
-   Moneyforbidden: Moneyforbidden,
-   Moneyrecive: Moneyrecive,
-   Moneyremove: Moneyremove,
-   Moneys: Moneys,
-   Moneysend: Moneysend,
-   Moneytick: Moneytick,
-   Moneytime: Moneytime,
-   Monitor: Monitor,
-   Monitormobbile: Monitormobbile,
-   Monitorrecorder: Monitorrecorder,
-   Moon: Moon,
-   More: More,
-   More2: More2,
-   Morecircle: Morecircle,
-   Moresquare: Moresquare,
-   Mouse: Mouse,
-   Mouse1: Mouse1,
-   Mousecircle: Mousecircle,
-   Mousesquare: Mousesquare,
-   Music: Music,
-   Musiccircle: Musiccircle,
-   Musicdashboard: Musicdashboard,
-   Musicfilter: Musicfilter,
-   Musiclibrary2: Musiclibrary2,
-   Musicnote: Musicnote,
-   Musicplay: Musicplay,
-   Musicplaylist: Musicplaylist,
-   Musicsquare: Musicsquare,
-   Musicsquareadd: Musicsquareadd,
-   Musicsquareremove: Musicsquareremove,
-   Musicsquaresearch: Musicsquaresearch,
-   Nebulas: Nebulas,
-   Nem: Nem,
-   Nexo: Nexo,
-   Next: Next,
-   Note: Note,
-   Note1: Note1,
-   Note2: Note2,
-   Note3: Note3,
-   Noteadd: Noteadd,
-   Notefavorite: Notefavorite,
-   Noteremove: Noteremove,
-   Notesquare: Notesquare,
-   Notetext: Notetext,
-   Notification: Notification,
-   Notification1: Notification1,
-   Notificationbing: Notificationbing,
-   Notificationcircle: Notificationcircle,
-   Notificationfavorite: Notificationfavorite,
-   Notificationstatus: Notificationstatus,
-   Oceanprotocol: Oceanprotocol,
-   Okb: Okb,
-   Omegacircle: Omegacircle,
-   Omegasquare: Omegasquare,
-   Ontology: Ontology,
-   Paintbucket: Paintbucket,
-   Paperclip: Paperclip,
-   Paperclip2: Paperclip2,
-   Passwordcheck: Passwordcheck,
-   Path: Path,
-   Path2: Path2,
-   Pathsquare: Pathsquare,
-   Pause: Pause,
-   Pausecircle: Pausecircle,
-   Paypal: Paypal,
-   Penadd: Penadd,
-   Penclose: Penclose,
-   Penremove: Penremove,
-   Pentool: Pentool,
-   Pentool2: Pentool2,
-   People: People,
-   Percentagecircle: Percentagecircle,
-   Percentagesquare: Percentagesquare,
-   Personalcard: Personalcard,
-   Pet: Pet,
-   Pharagraphspacing: Pharagraphspacing,
-   Photoshop: Photoshop,
-   Pictureframe: Pictureframe,
-   Play: Play,
-   Playadd: Playadd,
-   Playcircle: Playcircle,
-   Playcricle: Playcricle,
-   Playremove: Playremove,
-   Point: Point,
-   Polkadot: Polkadot,
-   Polygon: Polygon,
-   Polyswarm: Polyswarm,
-   Presentionchart: Presentionchart,
-   Previous: Previous,
-   Printer: Printer,
-   Printerslash: Printerslash,
-   Profile: Profile,
-   Profile2user: Profile2user,
-   Profileadd: Profileadd,
-   Profilecircle: Profilecircle,
-   Profiledelete: Profiledelete,
-   Profileremove: Profileremove,
-   Profiletick: Profiletick,
-   Programmingarrow: Programmingarrow,
-   Programmingarrows: Programmingarrows,
-   Python: Python,
-   Quant: Quant,
-   Quotedown: Quotedown,
-   Quotedowncircle: Quotedowncircle,
-   Quotedownsquare: Quotedownsquare,
-   Quoteup: Quoteup,
-   Quoteupcircle: Quoteupcircle,
-   Quoteupsquare: Quoteupsquare,
-   Radar: Radar,
-   Radar1: Radar1,
-   Radar2: Radar2,
-   Radio: Radio,
-   Ram: Ram,
-   Ram2: Ram2,
-   Ranking: Ranking,
-   Ranking1: Ranking1,
-   Receipt: Receipt,
-   Receipt1: Receipt1,
-   Receipt2: Receipt2,
-   Receipt21: Receipt21,
-   Receiptadd: Receiptadd,
-   Receiptdiscount: Receiptdiscount,
-   Receiptdisscount: Receiptdisscount,
-   Receiptedit: Receiptedit,
-   Receiptitem: Receiptitem,
-   Receiptminus: Receiptminus,
-   Receiptsearch: Receiptsearch,
-   Receiptsquare: Receiptsquare,
-   Receipttext: Receipttext,
-   Received: Received,
-   Receivesquare: Receivesquare,
-   Receivesquare2: Receivesquare2,
-   Record: Record,
-   Recordcircle: Recordcircle,
-   Recoveryconvert: Recoveryconvert,
-   Redo: Redo,
-   Refresh: Refresh,
-   Refresh2: Refresh2,
-   Refreshcircle: Refreshcircle,
-   Refreshleftsquare: Refreshleftsquare,
-   Refreshrightsquare: Refreshrightsquare,
-   Refreshsquare2: Refreshsquare2,
-   Repeat: Repeat,
-   Repeatcircle: Repeatcircle,
-   Repeatemusic: Repeatemusic,
-   Repeateone: Repeateone,
-   Reserve: Reserve,
-   Rotate3d: Rotate3d,
-   Rotateleft: Rotateleft,
-   Rotateleft1: Rotateleft1,
-   Rotateright: Rotateright,
-   Rotateright1: Rotateright1,
-   Routesquare: Routesquare,
-   Routing: Routing,
-   Routing2: Routing2,
-   Rowhorizontal: Rowhorizontal,
-   Rowvertical: Rowvertical,
-   Ruler: Ruler,
-   Rulerpen: Rulerpen,
-   Safehome: Safehome,
-   Sagittarius: Sagittarius,
-   Save2: Save2,
-   Saveadd: Saveadd,
-   Saveminus: Saveminus,
-   Saveremove: Saveremove,
-   Scan: Scan,
-   Scanbarcode: Scanbarcode,
-   Scanner: Scanner,
-   Scanning: Scanning,
-   Scissor: Scissor,
-   Scissor1: Scissor1,
-   Screenmirroring: Screenmirroring,
-   Scroll: Scroll,
-   Searchfavorite: Searchfavorite,
-   Searchfavorite1: Searchfavorite1,
-   Searchnormal: Searchnormal,
-   Searchnormal1: Searchnormal1,
-   Searchstatus: Searchstatus,
-   Searchstatus1: Searchstatus1,
-   Searchzoomin: Searchzoomin,
-   Searchzoomin1: Searchzoomin1,
-   Searchzoomout: Searchzoomout,
-   Searchzoomout1: Searchzoomout1,
-   Security: Security,
-   Securitycard: Securitycard,
-   Securitysafe: Securitysafe,
-   Securitytime: Securitytime,
-   Securityuser: Securityuser,
-   Send: Send,
-   Send1: Send1,
-   Send2: Send2,
-   Sendsqaure2: Sendsqaure2,
-   Sendsquare: Sendsquare,
-   Setting: Setting,
-   Setting2: Setting2,
-   Setting3: Setting3,
-   Setting4: Setting4,
-   Setting5: Setting5,
-   Settings: Settings,
-   Shapes: Shapes,
-   Shapes1: Shapes1,
-   Share: Share,
-   Shield: Shield,
-   Shieldcross: Shieldcross,
-   Shieldsearch: Shieldsearch,
-   Shieldsecurity: Shieldsecurity,
-   Shieldslash: Shieldslash,
-   Shieldtick: Shieldtick,
-   Ship: Ship,
-   Shop: Shop,
-   Shopadd: Shopadd,
-   Shoppingbag: Shoppingbag,
-   Shoppingcart: Shoppingcart,
-   Shopremove: Shopremove,
-   Shuffle: Shuffle,
-   Siacoin: Siacoin,
-   Sidebarbottom: Sidebarbottom,
-   Sidebarleft: Sidebarleft,
-   Sidebarright: Sidebarright,
-   Sidebartop: Sidebartop,
-   Signpost: Signpost,
-   Simcard: Simcard,
-   Simcard1: Simcard1,
-   Simcard2: Simcard2,
-   Size: Size,
-   Slack: Slack,
-   Slash: Slash,
-   Slider: Slider,
-   Sliderhorizontal: Sliderhorizontal,
-   Sliderhorizontal1: Sliderhorizontal1,
-   Slidervertical: Slidervertical,
-   Slidervertical1: Slidervertical1,
-   Smallcaps: Smallcaps,
-   Smartcar: Smartcar,
-   Smarthome: Smarthome,
-   Smileys: Smileys,
-   Sms: Sms,
-   Smsedit: Smsedit,
-   Smsnotification: Smsnotification,
-   Smssearch: Smssearch,
-   Smsstar: Smsstar,
-   Smstracking: Smstracking,
-   Snapchat: Snapchat,
-   Solana: Solana,
-   Sort: Sort,
-   Sound: Sound,
-   Speaker: Speaker,
-   Speedometer: Speedometer,
-   Spotify: Spotify,
-   Square3d: Square3d,
-   Squares3: Squares3,
-   Stacks: Stacks,
-   Star: Star,
-   Star1: Star1,
-   Starslash: Starslash,
-   Status: Status,
-   Statusup: Statusup,
-   Stellar: Stellar,
-   Sticker: Sticker,
-   Stickynote: Stickynote,
-   Stop: Stop,
-   Stopcircle: Stopcircle,
-   Story: Story,
-   Strongbox: Strongbox,
-   Strongbox2: Strongbox2,
-   Subtitle: Subtitle,
-   Sun: Sun,
-   Sun1: Sun1,
-   Sunfog: Sunfog,
-   Support24: Support24,
-   Tag: Tag,
-   Tag2: Tag2,
-   Tagcross: Tagcross,
-   Tagright: Tagright,
-   Taguser: Taguser,
-   Task: Task,
-   Tasksquare: Tasksquare,
-   Teacher: Teacher,
-   Tenx: Tenx,
-   Tether: Tether,
-   Text: Text,
-   Textaligncenter: Textaligncenter,
-   Textalignjustifycenter: Textalignjustifycenter,
-   Textalignjustifyleft: Textalignjustifyleft,
-   Textalignjustifyright: Textalignjustifyright,
-   Textalignleft: Textalignleft,
-   Textalignright: Textalignright,
-   Textblock: Textblock,
-   Textbold: Textbold,
-   Textitalic: Textitalic,
-   Textunderline: Textunderline,
-   Thegraph: Thegraph,
-   Theta: Theta,
-   Thorchain: Thorchain,
-   Tickcircle: Tickcircle,
-   Ticket: Ticket,
-   Ticket2: Ticket2,
-   Ticketdiscount: Ticketdiscount,
-   Ticketexpired: Ticketexpired,
-   Ticketstar: Ticketstar,
-   Ticksquare: Ticksquare,
-   Timer: Timer,
-   Timer1: Timer1,
-   Timerpause: Timerpause,
-   Timerstart: Timerstart,
-   Toggleoff: Toggleoff,
-   Toggleoffcircle: Toggleoffcircle,
-   Toggleon: Toggleon,
-   Toggleoncircle: Toggleoncircle,
-   Trade: Trade,
-   Transactionminus: Transactionminus,
-   Translate: Translate,
-   Trash: Trash,
-   Tree: Tree,
-   Trello: Trello,
-   Trenddown: Trenddown,
-   Trendup: Trendup,
-   Triangle: Triangle,
-   Triangle2: Triangle2,
-   Trontron: Trontron,
-   Truck: Truck,
-   Truckfast: Truckfast,
-   Truckremove: Truckremove,
-   Trucktick: Trucktick,
-   Trucktime: Trucktime,
-   Trushsquare: Trushsquare,
-   Twitch: Twitch,
-   Ui8: Ui8,
-   Undo: Undo,
-   Unlimited: Unlimited,
-   Unlock: Unlock,
-   Usdcoin: Usdcoin,
-   User: User,
-   Useradd: Useradd,
-   Usercirlceadd: Usercirlceadd,
-   Useredit: Useredit,
-   Userminus: Userminus,
-   Useroctagon: Useroctagon,
-   Userremove: Userremove,
-   Usersearch: Usersearch,
-   Usersquare: Usersquare,
-   Usertag: Usertag,
-   Usertick: Usertick,
-   Velas: Velas,
-   Verify: Verify,
-   Vibe: Vibe,
-   Video: Video,
-   Videoadd: Videoadd,
-   Videocircle: Videocircle,
-   Videohorizontal: Videohorizontal,
-   Videooctagon: Videooctagon,
-   Videoplay: Videoplay,
-   Videoremove: Videoremove,
-   Videoslash: Videoslash,
-   Videosquare: Videosquare,
-   Videotick: Videotick,
-   Videotime: Videotime,
-   Videovertical: Videovertical,
-   Voicecricle: Voicecricle,
-   Voicesquare: Voicesquare,
-   Volume: Volume,
-   Volumecross: Volumecross,
-   Volumehigh: Volumehigh,
-   Volumelow: Volumelow,
-   Volumelow1: Volumelow1,
-   Volumemute: Volumemute,
-   Volumeslash: Volumeslash,
-   Volumeup: Volumeup,
-   Vuesax: Vuesax,
-   Wallet: Wallet,
-   Wallet1: Wallet1,
-   Wallet2: Wallet2,
-   Wallet3: Wallet3,
-   Walletadd: Walletadd,
-   Walletadd1: Walletadd1,
-   Walletcheck: Walletcheck,
-   Walletminus: Walletminus,
-   Walletmoney: Walletmoney,
-   Walletremove: Walletremove,
-   Walletsearch: Walletsearch,
-   Wanchain: Wanchain,
-   Wanchain1: Wanchain1,
-   Warning2: Warning2,
-   Watch: Watch,
-   Watchstatus: Watchstatus,
-   Weight: Weight,
-   Weight1: Weight1,
-   Whatsapp: Whatsapp,
-   Wifi: Wifi,
-   Wifisquare: Wifisquare,
-   Wind: Wind,
-   Wind2: Wind2,
-   Windows: Windows,
-   Wing: Wing,
-   Woman: Woman,
-   Xd: Xd,
-   Xiaomi: Xiaomi,
-   Xrp: Xrp,
-   Youtube: Youtube,
-   Zel: Zel,
-   Zoom: Zoom,
-};
+export const listIcons = [
+   {
+      "component": Aave,
+      "name": "Aave"
+   },
+   {
+      "component": Activity,
+      "name": "Activity"
+   },
+   {
+      "component": Add,
+      "name": "Add"
+   },
+   {
+      "component": Addcircle,
+      "name": "Addcircle"
+   },
+   {
+      "component": Additem,
+      "name": "Additem"
+   },
+   {
+      "component": Addsquare,
+      "name": "Addsquare"
+   },
+   {
+      "component": Airdrop,
+      "name": "Airdrop"
+   },
+   {
+      "component": Airplane,
+      "name": "Airplane"
+   },
+   {
+      "component": Airplanesquare,
+      "name": "Airplanesquare"
+   },
+   {
+      "component": Airpod,
+      "name": "Airpod"
+   },
+   {
+      "component": Airpods,
+      "name": "Airpods"
+   },
+   {
+      "component": Alarm,
+      "name": "Alarm"
+   },
+   {
+      "component": Alignbottom,
+      "name": "Alignbottom"
+   },
+   {
+      "component": Alignhorizontally,
+      "name": "Alignhorizontally"
+   },
+   {
+      "component": Alignleft,
+      "name": "Alignleft"
+   },
+   {
+      "component": Alignright,
+      "name": "Alignright"
+   },
+   {
+      "component": Aligntop,
+      "name": "Aligntop"
+   },
+   {
+      "component": Alignvertically,
+      "name": "Alignvertically"
+   },
+   {
+      "component": Android,
+      "name": "Android"
+   },
+   {
+      "component": Ankr,
+      "name": "Ankr"
+   },
+   {
+      "component": Apple,
+      "name": "Apple"
+   },
+   {
+      "component": Aquarius,
+      "name": "Aquarius"
+   },
+   {
+      "component": Archive,
+      "name": "Archive"
+   },
+   {
+      "component": Archive1,
+      "name": "Archive1"
+   },
+   {
+      "component": Archive2,
+      "name": "Archive2"
+   },
+   {
+      "component": Archiveadd,
+      "name": "Archiveadd"
+   },
+   {
+      "component": Archivebook,
+      "name": "Archivebook"
+   },
+   {
+      "component": Archiveminus,
+      "name": "Archiveminus"
+   },
+   {
+      "component": Archiveslash,
+      "name": "Archiveslash"
+   },
+   {
+      "component": Archivetick,
+      "name": "Archivetick"
+   },
+   {
+      "component": Arrangecircle,
+      "name": "Arrangecircle"
+   },
+   {
+      "component": Arrangecircle2,
+      "name": "Arrangecircle2"
+   },
+   {
+      "component": Arrangesquare,
+      "name": "Arrangesquare"
+   },
+   {
+      "component": Arrangesquare2,
+      "name": "Arrangesquare2"
+   },
+   {
+      "component": Arrow,
+      "name": "Arrow"
+   },
+   {
+      "component": Arrow2,
+      "name": "Arrow2"
+   },
+   {
+      "component": Arrow3,
+      "name": "Arrow3"
+   },
+   {
+      "component": Arrowbottom,
+      "name": "Arrowbottom"
+   },
+   {
+      "component": Arrowcircledown,
+      "name": "Arrowcircledown"
+   },
+   {
+      "component": Arrowcircleleft,
+      "name": "Arrowcircleleft"
+   },
+   {
+      "component": Arrowcircleright,
+      "name": "Arrowcircleright"
+   },
+   {
+      "component": Arrowcircleup,
+      "name": "Arrowcircleup"
+   },
+   {
+      "component": Arrowdown,
+      "name": "Arrowdown"
+   },
+   {
+      "component": Arrowdown1,
+      "name": "Arrowdown1"
+   },
+   {
+      "component": Arrowdown2,
+      "name": "Arrowdown2"
+   },
+   {
+      "component": Arrowleft,
+      "name": "Arrowleft"
+   },
+   {
+      "component": Arrowleft1,
+      "name": "Arrowleft1"
+   },
+   {
+      "component": Arrowleft2,
+      "name": "Arrowleft2"
+   },
+   {
+      "component": Arrowleft3,
+      "name": "Arrowleft3"
+   },
+   {
+      "component": Arrowright,
+      "name": "Arrowright"
+   },
+   {
+      "component": Arrowright1,
+      "name": "Arrowright1"
+   },
+   {
+      "component": Arrowright2,
+      "name": "Arrowright2"
+   },
+   {
+      "component": Arrowright3,
+      "name": "Arrowright3"
+   },
+   {
+      "component": Arrowsquare,
+      "name": "Arrowsquare"
+   },
+   {
+      "component": Arrowsquaredown,
+      "name": "Arrowsquaredown"
+   },
+   {
+      "component": Arrowsquareleft,
+      "name": "Arrowsquareleft"
+   },
+   {
+      "component": Arrowsquareright,
+      "name": "Arrowsquareright"
+   },
+   {
+      "component": Arrowsquareup,
+      "name": "Arrowsquareup"
+   },
+   {
+      "component": Arrowswap,
+      "name": "Arrowswap"
+   },
+   {
+      "component": Arrowswaphorizontal,
+      "name": "Arrowswaphorizontal"
+   },
+   {
+      "component": Arrowup,
+      "name": "Arrowup"
+   },
+   {
+      "component": Arrowup1,
+      "name": "Arrowup1"
+   },
+   {
+      "component": Arrowup2,
+      "name": "Arrowup2"
+   },
+   {
+      "component": Arrowup3,
+      "name": "Arrowup3"
+   },
+   {
+      "component": Attachcircle,
+      "name": "Attachcircle"
+   },
+   {
+      "component": Attachsquare,
+      "name": "Attachsquare"
+   },
+   {
+      "component": Audiosquare,
+      "name": "Audiosquare"
+   },
+   {
+      "component": Augur,
+      "name": "Augur"
+   },
+   {
+      "component": Autobrightness,
+      "name": "Autobrightness"
+   },
+   {
+      "component": Autonio,
+      "name": "Autonio"
+   },
+   {
+      "component": Avalanche,
+      "name": "Avalanche"
+   },
+   {
+      "component": Award,
+      "name": "Award"
+   },
+   {
+      "component": Backsquare,
+      "name": "Backsquare"
+   },
+   {
+      "component": Backward,
+      "name": "Backward"
+   },
+   {
+      "component": Backward10seconds,
+      "name": "Backward10seconds"
+   },
+   {
+      "component": Backward15seconds,
+      "name": "Backward15seconds"
+   },
+   {
+      "component": Backward5seconds,
+      "name": "Backward5seconds"
+   },
+   {
+      "component": Backwarditem,
+      "name": "Backwarditem"
+   },
+   {
+      "component": Bag,
+      "name": "Bag"
+   },
+   {
+      "component": Bag2,
+      "name": "Bag2"
+   },
+   {
+      "component": Bagcross,
+      "name": "Bagcross"
+   },
+   {
+      "component": Bagcross1,
+      "name": "Bagcross1"
+   },
+   {
+      "component": Baghappy,
+      "name": "Baghappy"
+   },
+   {
+      "component": Bagtick,
+      "name": "Bagtick"
+   },
+   {
+      "component": Bagtick2,
+      "name": "Bagtick2"
+   },
+   {
+      "component": Bagtimer,
+      "name": "Bagtimer"
+   },
+   {
+      "component": Bank,
+      "name": "Bank"
+   },
+   {
+      "component": Barcode,
+      "name": "Barcode"
+   },
+   {
+      "component": Battery3full,
+      "name": "Battery3full"
+   },
+   {
+      "component": Batterycharging,
+      "name": "Batterycharging"
+   },
+   {
+      "component": Batterydisable,
+      "name": "Batterydisable"
+   },
+   {
+      "component": Batteryempty,
+      "name": "Batteryempty"
+   },
+   {
+      "component": Batteryempty1,
+      "name": "Batteryempty1"
+   },
+   {
+      "component": Batteryfull,
+      "name": "Batteryfull"
+   },
+   {
+      "component": Be,
+      "name": "Be"
+   },
+   {
+      "component": Bezier,
+      "name": "Bezier"
+   },
+   {
+      "component": Bill,
+      "name": "Bill"
+   },
+   {
+      "component": Binancecoin,
+      "name": "Binancecoin"
+   },
+   {
+      "component": Binanceusd,
+      "name": "Binanceusd"
+   },
+   {
+      "component": Bitcoin,
+      "name": "Bitcoin"
+   },
+   {
+      "component": Bitcoincard,
+      "name": "Bitcoincard"
+   },
+   {
+      "component": Bitcoinconvert,
+      "name": "Bitcoinconvert"
+   },
+   {
+      "component": Bitcoinrefresh,
+      "name": "Bitcoinrefresh"
+   },
+   {
+      "component": Blend,
+      "name": "Blend"
+   },
+   {
+      "component": Blend2,
+      "name": "Blend2"
+   },
+   {
+      "component": Blogger,
+      "name": "Blogger"
+   },
+   {
+      "component": Bluetooth,
+      "name": "Bluetooth"
+   },
+   {
+      "component": Bluetooth2,
+      "name": "Bluetooth2"
+   },
+   {
+      "component": Bluetoothcircle,
+      "name": "Bluetoothcircle"
+   },
+   {
+      "component": Bluetoothrectangle,
+      "name": "Bluetoothrectangle"
+   },
+   {
+      "component": Blur,
+      "name": "Blur"
+   },
+   {
+      "component": Book,
+      "name": "Book"
+   },
+   {
+      "component": Book1,
+      "name": "Book1"
+   },
+   {
+      "component": Bookmark,
+      "name": "Bookmark"
+   },
+   {
+      "component": Bookmark2,
+      "name": "Bookmark2"
+   },
+   {
+      "component": Booksaved,
+      "name": "Booksaved"
+   },
+   {
+      "component": Booksquare,
+      "name": "Booksquare"
+   },
+   {
+      "component": Bootstrap,
+      "name": "Bootstrap"
+   },
+   {
+      "component": Box,
+      "name": "Box"
+   },
+   {
+      "component": Box1,
+      "name": "Box1"
+   },
+   {
+      "component": Box2,
+      "name": "Box2"
+   },
+   {
+      "component": Boxadd,
+      "name": "Boxadd"
+   },
+   {
+      "component": Boxremove,
+      "name": "Boxremove"
+   },
+   {
+      "component": Boxsearch,
+      "name": "Boxsearch"
+   },
+   {
+      "component": Boxtick,
+      "name": "Boxtick"
+   },
+   {
+      "component": Boxtime,
+      "name": "Boxtime"
+   },
+   {
+      "component": Briefcase,
+      "name": "Briefcase"
+   },
+   {
+      "component": Brifecasecross,
+      "name": "Brifecasecross"
+   },
+   {
+      "component": Brifecasetick,
+      "name": "Brifecasetick"
+   },
+   {
+      "component": Brifecasetimer,
+      "name": "Brifecasetimer"
+   },
+   {
+      "component": Broom,
+      "name": "Broom"
+   },
+   {
+      "component": Brush,
+      "name": "Brush"
+   },
+   {
+      "component": Brush1,
+      "name": "Brush1"
+   },
+   {
+      "component": Brush2,
+      "name": "Brush2"
+   },
+   {
+      "component": Brush3,
+      "name": "Brush3"
+   },
+   {
+      "component": Brush4,
+      "name": "Brush4"
+   },
+   {
+      "component": Bubble,
+      "name": "Bubble"
+   },
+   {
+      "component": Bucket,
+      "name": "Bucket"
+   },
+   {
+      "component": Bucketcircle,
+      "name": "Bucketcircle"
+   },
+   {
+      "component": Bucketsquare,
+      "name": "Bucketsquare"
+   },
+   {
+      "component": Building,
+      "name": "Building"
+   },
+   {
+      "component": Building3,
+      "name": "Building3"
+   },
+   {
+      "component": Building4,
+      "name": "Building4"
+   },
+   {
+      "component": Buildings,
+      "name": "Buildings"
+   },
+   {
+      "component": Buildings2,
+      "name": "Buildings2"
+   },
+   {
+      "component": Buliding,
+      "name": "Buliding"
+   },
+   {
+      "component": Bus,
+      "name": "Bus"
+   },
+   {
+      "component": Buycrypto,
+      "name": "Buycrypto"
+   },
+   {
+      "component": Cake,
+      "name": "Cake"
+   },
+   {
+      "component": Calculator,
+      "name": "Calculator"
+   },
+   {
+      "component": Calendar,
+      "name": "Calendar"
+   },
+   {
+      "component": Calendar1,
+      "name": "Calendar1"
+   },
+   {
+      "component": Calendar2,
+      "name": "Calendar2"
+   },
+   {
+      "component": Calendaradd,
+      "name": "Calendaradd"
+   },
+   {
+      "component": Calendarcircle,
+      "name": "Calendarcircle"
+   },
+   {
+      "component": Calendaredit,
+      "name": "Calendaredit"
+   },
+   {
+      "component": Calendarremove,
+      "name": "Calendarremove"
+   },
+   {
+      "component": Calendarsearch,
+      "name": "Calendarsearch"
+   },
+   {
+      "component": Calendartick,
+      "name": "Calendartick"
+   },
+   {
+      "component": Call,
+      "name": "Call"
+   },
+   {
+      "component": Calladd,
+      "name": "Calladd"
+   },
+   {
+      "component": Callcalling,
+      "name": "Callcalling"
+   },
+   {
+      "component": Callincoming,
+      "name": "Callincoming"
+   },
+   {
+      "component": Callminus,
+      "name": "Callminus"
+   },
+   {
+      "component": Calloutgoing,
+      "name": "Calloutgoing"
+   },
+   {
+      "component": Callreceived,
+      "name": "Callreceived"
+   },
+   {
+      "component": Callremove,
+      "name": "Callremove"
+   },
+   {
+      "component": Callslash,
+      "name": "Callslash"
+   },
+   {
+      "component": Camera,
+      "name": "Camera"
+   },
+   {
+      "component": Cameraslash,
+      "name": "Cameraslash"
+   },
+   {
+      "component": Candle,
+      "name": "Candle"
+   },
+   {
+      "component": Candle2,
+      "name": "Candle2"
+   },
+   {
+      "component": Car,
+      "name": "Car"
+   },
+   {
+      "component": Card,
+      "name": "Card"
+   },
+   {
+      "component": Cardadd,
+      "name": "Cardadd"
+   },
+   {
+      "component": Cardano,
+      "name": "Cardano"
+   },
+   {
+      "component": Cardcoin,
+      "name": "Cardcoin"
+   },
+   {
+      "component": Cardedit,
+      "name": "Cardedit"
+   },
+   {
+      "component": Cardpos,
+      "name": "Cardpos"
+   },
+   {
+      "component": Cardreceive,
+      "name": "Cardreceive"
+   },
+   {
+      "component": Cardremove,
+      "name": "Cardremove"
+   },
+   {
+      "component": Cardremove1,
+      "name": "Cardremove1"
+   },
+   {
+      "component": Cards,
+      "name": "Cards"
+   },
+   {
+      "component": Cardsend,
+      "name": "Cardsend"
+   },
+   {
+      "component": Cardslash,
+      "name": "Cardslash"
+   },
+   {
+      "component": Cardtick,
+      "name": "Cardtick"
+   },
+   {
+      "component": Cardtick1,
+      "name": "Cardtick1"
+   },
+   {
+      "component": Category,
+      "name": "Category"
+   },
+   {
+      "component": Category2,
+      "name": "Category2"
+   },
+   {
+      "component": Cd,
+      "name": "Cd"
+   },
+   {
+      "component": Celo,
+      "name": "Celo"
+   },
+   {
+      "component": Celsius,
+      "name": "Celsius"
+   },
+   {
+      "component": Chainlink,
+      "name": "Chainlink"
+   },
+   {
+      "component": Chart,
+      "name": "Chart"
+   },
+   {
+      "component": Chart1,
+      "name": "Chart1"
+   },
+   {
+      "component": Chart2,
+      "name": "Chart2"
+   },
+   {
+      "component": Chart21,
+      "name": "Chart21"
+   },
+   {
+      "component": Chart3,
+      "name": "Chart3"
+   },
+   {
+      "component": Chartfail,
+      "name": "Chartfail"
+   },
+   {
+      "component": Chartsquare,
+      "name": "Chartsquare"
+   },
+   {
+      "component": Chartsuccess,
+      "name": "Chartsuccess"
+   },
+   {
+      "component": Check,
+      "name": "Check"
+   },
+   {
+      "component": Chrome,
+      "name": "Chrome"
+   },
+   {
+      "component": Civic,
+      "name": "Civic"
+   },
+   {
+      "component": Clipboard,
+      "name": "Clipboard"
+   },
+   {
+      "component": Clipboardclose,
+      "name": "Clipboardclose"
+   },
+   {
+      "component": Clipboardexport,
+      "name": "Clipboardexport"
+   },
+   {
+      "component": Clipboardimport,
+      "name": "Clipboardimport"
+   },
+   {
+      "component": Clipboardtext,
+      "name": "Clipboardtext"
+   },
+   {
+      "component": Clipboardtick,
+      "name": "Clipboardtick"
+   },
+   {
+      "component": Clock,
+      "name": "Clock"
+   },
+   {
+      "component": Clock1,
+      "name": "Clock1"
+   },
+   {
+      "component": Closecircle,
+      "name": "Closecircle"
+   },
+   {
+      "component": Closesquare,
+      "name": "Closesquare"
+   },
+   {
+      "component": Cloud,
+      "name": "Cloud"
+   },
+   {
+      "component": Cloudadd,
+      "name": "Cloudadd"
+   },
+   {
+      "component": Cloudchange,
+      "name": "Cloudchange"
+   },
+   {
+      "component": Cloudconnection,
+      "name": "Cloudconnection"
+   },
+   {
+      "component": Cloudcross,
+      "name": "Cloudcross"
+   },
+   {
+      "component": Clouddrizzle,
+      "name": "Clouddrizzle"
+   },
+   {
+      "component": Cloudfog,
+      "name": "Cloudfog"
+   },
+   {
+      "component": Cloudlightning,
+      "name": "Cloudlightning"
+   },
+   {
+      "component": Cloudminus,
+      "name": "Cloudminus"
+   },
+   {
+      "component": Cloudnotif,
+      "name": "Cloudnotif"
+   },
+   {
+      "component": Cloudplus,
+      "name": "Cloudplus"
+   },
+   {
+      "component": Cloudremove,
+      "name": "Cloudremove"
+   },
+   {
+      "component": Cloudsnow,
+      "name": "Cloudsnow"
+   },
+   {
+      "component": Cloudsunny,
+      "name": "Cloudsunny"
+   },
+   {
+      "component": Code,
+      "name": "Code"
+   },
+   {
+      "component": Code1,
+      "name": "Code1"
+   },
+   {
+      "component": Codecircle,
+      "name": "Codecircle"
+   },
+   {
+      "component": Coffee,
+      "name": "Coffee"
+   },
+   {
+      "component": Coin,
+      "name": "Coin"
+   },
+   {
+      "component": Coin1,
+      "name": "Coin1"
+   },
+   {
+      "component": Colorfilter,
+      "name": "Colorfilter"
+   },
+   {
+      "component": Colorssquare,
+      "name": "Colorssquare"
+   },
+   {
+      "component": Colorswatch,
+      "name": "Colorswatch"
+   },
+   {
+      "component": Command,
+      "name": "Command"
+   },
+   {
+      "component": Commandsquare,
+      "name": "Commandsquare"
+   },
+   {
+      "component": Component,
+      "name": "Component"
+   },
+   {
+      "component": Computing,
+      "name": "Computing"
+   },
+   {
+      "component": Convert,
+      "name": "Convert"
+   },
+   {
+      "component": Convert3dcube,
+      "name": "Convert3dcube"
+   },
+   {
+      "component": Convertcard,
+      "name": "Convertcard"
+   },
+   {
+      "component": Convertshape,
+      "name": "Convertshape"
+   },
+   {
+      "component": Convertshape2,
+      "name": "Convertshape2"
+   },
+   {
+      "component": Copy,
+      "name": "Copy"
+   },
+   {
+      "component": Copyright,
+      "name": "Copyright"
+   },
+   {
+      "component": Copysuccess,
+      "name": "Copysuccess"
+   },
+   {
+      "component": Courthouse,
+      "name": "Courthouse"
+   },
+   {
+      "component": Cpu,
+      "name": "Cpu"
+   },
+   {
+      "component": Cpucharge,
+      "name": "Cpucharge"
+   },
+   {
+      "component": Cpusetting,
+      "name": "Cpusetting"
+   },
+   {
+      "component": Creativecommons,
+      "name": "Creativecommons"
+   },
+   {
+      "component": Crop,
+      "name": "Crop"
+   },
+   {
+      "component": Crown,
+      "name": "Crown"
+   },
+   {
+      "component": Crown1,
+      "name": "Crown1"
+   },
+   {
+      "component": Css3,
+      "name": "Css3"
+   },
+   {
+      "component": Cube3d,
+      "name": "Cube3d"
+   },
+   {
+      "component": Cubescan3d,
+      "name": "Cubescan3d"
+   },
+   {
+      "component": Cup,
+      "name": "Cup"
+   },
+   {
+      "component": Dai,
+      "name": "Dai"
+   },
+   {
+      "component": Danger,
+      "name": "Danger"
+   },
+   {
+      "component": Dash,
+      "name": "Dash"
+   },
+   {
+      "component": Data,
+      "name": "Data"
+   },
+   {
+      "component": Data2,
+      "name": "Data2"
+   },
+   {
+      "component": Decred,
+      "name": "Decred"
+   },
+   {
+      "component": Dent,
+      "name": "Dent"
+   },
+   {
+      "component": Designtools,
+      "name": "Designtools"
+   },
+   {
+      "component": Devicemessage,
+      "name": "Devicemessage"
+   },
+   {
+      "component": Devices,
+      "name": "Devices"
+   },
+   {
+      "component": Diagram,
+      "name": "Diagram"
+   },
+   {
+      "component": Diamonds,
+      "name": "Diamonds"
+   },
+   {
+      "component": Direct,
+      "name": "Direct"
+   },
+   {
+      "component": Directboxdefault,
+      "name": "Directboxdefault"
+   },
+   {
+      "component": Directboxnotif,
+      "name": "Directboxnotif"
+   },
+   {
+      "component": Directboxreceive,
+      "name": "Directboxreceive"
+   },
+   {
+      "component": Directboxsend,
+      "name": "Directboxsend"
+   },
+   {
+      "component": Directdown,
+      "name": "Directdown"
+   },
+   {
+      "component": Directinbox,
+      "name": "Directinbox"
+   },
+   {
+      "component": Directleft,
+      "name": "Directleft"
+   },
+   {
+      "component": Directnormal,
+      "name": "Directnormal"
+   },
+   {
+      "component": Directnotification,
+      "name": "Directnotification"
+   },
+   {
+      "component": Directright,
+      "name": "Directright"
+   },
+   {
+      "component": Directsend,
+      "name": "Directsend"
+   },
+   {
+      "component": Directup,
+      "name": "Directup"
+   },
+   {
+      "component": Discountcircle,
+      "name": "Discountcircle"
+   },
+   {
+      "component": Discountshape,
+      "name": "Discountshape"
+   },
+   {
+      "component": Discover,
+      "name": "Discover"
+   },
+   {
+      "component": Discover1,
+      "name": "Discover1"
+   },
+   {
+      "component": Dislike,
+      "name": "Dislike"
+   },
+   {
+      "component": Document,
+      "name": "Document"
+   },
+   {
+      "component": Document1,
+      "name": "Document1"
+   },
+   {
+      "component": Documentcloud,
+      "name": "Documentcloud"
+   },
+   {
+      "component": Documentcode,
+      "name": "Documentcode"
+   },
+   {
+      "component": Documentcode2,
+      "name": "Documentcode2"
+   },
+   {
+      "component": Documentcopy,
+      "name": "Documentcopy"
+   },
+   {
+      "component": Documentdownload,
+      "name": "Documentdownload"
+   },
+   {
+      "component": Documentfavorite,
+      "name": "Documentfavorite"
+   },
+   {
+      "component": Documentfilter,
+      "name": "Documentfilter"
+   },
+   {
+      "component": Documentforward,
+      "name": "Documentforward"
+   },
+   {
+      "component": Documentlike,
+      "name": "Documentlike"
+   },
+   {
+      "component": Documentnormal,
+      "name": "Documentnormal"
+   },
+   {
+      "component": Documentprevious,
+      "name": "Documentprevious"
+   },
+   {
+      "component": Documentsketch,
+      "name": "Documentsketch"
+   },
+   {
+      "component": Documenttext,
+      "name": "Documenttext"
+   },
+   {
+      "component": Documenttext1,
+      "name": "Documenttext1"
+   },
+   {
+      "component": Documentupload,
+      "name": "Documentupload"
+   },
+   {
+      "component": Dollarcircle,
+      "name": "Dollarcircle"
+   },
+   {
+      "component": Dollarsquare,
+      "name": "Dollarsquare"
+   },
+   {
+      "component": Dribbble,
+      "name": "Dribbble"
+   },
+   {
+      "component": Driver,
+      "name": "Driver"
+   },
+   {
+      "component": Driver2,
+      "name": "Driver2"
+   },
+   {
+      "component": Driverrefresh,
+      "name": "Driverrefresh"
+   },
+   {
+      "component": Driving,
+      "name": "Driving"
+   },
+   {
+      "component": Drop,
+      "name": "Drop"
+   },
+   {
+      "component": Dropbox,
+      "name": "Dropbox"
+   },
+   {
+      "component": Edit,
+      "name": "Edit"
+   },
+   {
+      "component": Edit2,
+      "name": "Edit2"
+   },
+   {
+      "component": Educare,
+      "name": "Educare"
+   },
+   {
+      "component": Electricity,
+      "name": "Electricity"
+   },
+   {
+      "component": Element1,
+      "name": "Element1"
+   },
+   {
+      "component": Element2,
+      "name": "Element2"
+   },
+   {
+      "component": Element3,
+      "name": "Element3"
+   },
+   {
+      "component": Element4,
+      "name": "Element4"
+   },
+   {
+      "component": Elementequal,
+      "name": "Elementequal"
+   },
+   {
+      "component": Elementplus,
+      "name": "Elementplus"
+   },
+   {
+      "component": Emercoin,
+      "name": "Emercoin"
+   },
+   {
+      "component": Emojihappy,
+      "name": "Emojihappy"
+   },
+   {
+      "component": Emojinormal,
+      "name": "Emojinormal"
+   },
+   {
+      "component": Emojisad,
+      "name": "Emojisad"
+   },
+   {
+      "component": Emptywallet,
+      "name": "Emptywallet"
+   },
+   {
+      "component": Emptywalletadd,
+      "name": "Emptywalletadd"
+   },
+   {
+      "component": Emptywalletchange,
+      "name": "Emptywalletchange"
+   },
+   {
+      "component": Emptywalletremove,
+      "name": "Emptywalletremove"
+   },
+   {
+      "component": Emptywallettick,
+      "name": "Emptywallettick"
+   },
+   {
+      "component": Emptywallettime,
+      "name": "Emptywallettime"
+   },
+   {
+      "component": Enjincoin,
+      "name": "Enjincoin"
+   },
+   {
+      "component": Eos,
+      "name": "Eos"
+   },
+   {
+      "component": Eraser,
+      "name": "Eraser"
+   },
+   {
+      "component": Eraser1,
+      "name": "Eraser1"
+   },
+   {
+      "component": Ethereum,
+      "name": "Ethereum"
+   },
+   {
+      "component": Ethereumclassic,
+      "name": "Ethereumclassic"
+   },
+   {
+      "component": Export,
+      "name": "Export"
+   },
+   {
+      "component": Export1,
+      "name": "Export1"
+   },
+   {
+      "component": Export2,
+      "name": "Export2"
+   },
+   {
+      "component": Export3,
+      "name": "Export3"
+   },
+   {
+      "component": Externaldrive,
+      "name": "Externaldrive"
+   },
+   {
+      "component": Eye,
+      "name": "Eye"
+   },
+   {
+      "component": Eyeslash,
+      "name": "Eyeslash"
+   },
+   {
+      "component": Facebook,
+      "name": "Facebook"
+   },
+   {
+      "component": Fatrows,
+      "name": "Fatrows"
+   },
+   {
+      "component": Favoritechart,
+      "name": "Favoritechart"
+   },
+   {
+      "component": Figma,
+      "name": "Figma"
+   },
+   {
+      "component": Figma1,
+      "name": "Figma1"
+   },
+   {
+      "component": Filter,
+      "name": "Filter"
+   },
+   {
+      "component": Filteradd,
+      "name": "Filteradd"
+   },
+   {
+      "component": Filteredit,
+      "name": "Filteredit"
+   },
+   {
+      "component": Filterremove,
+      "name": "Filterremove"
+   },
+   {
+      "component": Filtersearch,
+      "name": "Filtersearch"
+   },
+   {
+      "component": Filtersquare,
+      "name": "Filtersquare"
+   },
+   {
+      "component": Filtertick,
+      "name": "Filtertick"
+   },
+   {
+      "component": Fingercricle,
+      "name": "Fingercricle"
+   },
+   {
+      "component": Fingerscan,
+      "name": "Fingerscan"
+   },
+   {
+      "component": Firstline,
+      "name": "Firstline"
+   },
+   {
+      "component": Flag,
+      "name": "Flag"
+   },
+   {
+      "component": Flag2,
+      "name": "Flag2"
+   },
+   {
+      "component": Flash,
+      "name": "Flash"
+   },
+   {
+      "component": Flash1,
+      "name": "Flash1"
+   },
+   {
+      "component": Flashcircle,
+      "name": "Flashcircle"
+   },
+   {
+      "component": Flashcircle1,
+      "name": "Flashcircle1"
+   },
+   {
+      "component": Flashslash,
+      "name": "Flashslash"
+   },
+   {
+      "component": Folder,
+      "name": "Folder"
+   },
+   {
+      "component": Folder2,
+      "name": "Folder2"
+   },
+   {
+      "component": Folderadd,
+      "name": "Folderadd"
+   },
+   {
+      "component": Foldercloud,
+      "name": "Foldercloud"
+   },
+   {
+      "component": Folderconnection,
+      "name": "Folderconnection"
+   },
+   {
+      "component": Foldercross,
+      "name": "Foldercross"
+   },
+   {
+      "component": Folderfavorite,
+      "name": "Folderfavorite"
+   },
+   {
+      "component": Folderminus,
+      "name": "Folderminus"
+   },
+   {
+      "component": Folderopen,
+      "name": "Folderopen"
+   },
+   {
+      "component": Forbidden,
+      "name": "Forbidden"
+   },
+   {
+      "component": Forbidden2,
+      "name": "Forbidden2"
+   },
+   {
+      "component": Formatcircle,
+      "name": "Formatcircle"
+   },
+   {
+      "component": Formatsquare,
+      "name": "Formatsquare"
+   },
+   {
+      "component": Forward,
+      "name": "Forward"
+   },
+   {
+      "component": Forward10seconds,
+      "name": "Forward10seconds"
+   },
+   {
+      "component": Forward15seconds,
+      "name": "Forward15seconds"
+   },
+   {
+      "component": Forward5seconds,
+      "name": "Forward5seconds"
+   },
+   {
+      "component": Forwarditem,
+      "name": "Forwarditem"
+   },
+   {
+      "component": Forwardsquare,
+      "name": "Forwardsquare"
+   },
+   {
+      "component": Framer,
+      "name": "Framer"
+   },
+   {
+      "component": Ftxtoken,
+      "name": "Ftxtoken"
+   },
+   {
+      "component": Gallery,
+      "name": "Gallery"
+   },
+   {
+      "component": Galleryadd,
+      "name": "Galleryadd"
+   },
+   {
+      "component": Galleryedit,
+      "name": "Galleryedit"
+   },
+   {
+      "component": Galleryexport,
+      "name": "Galleryexport"
+   },
+   {
+      "component": Galleryfavorite,
+      "name": "Galleryfavorite"
+   },
+   {
+      "component": Galleryimport,
+      "name": "Galleryimport"
+   },
+   {
+      "component": Galleryremove,
+      "name": "Galleryremove"
+   },
+   {
+      "component": Galleryslash,
+      "name": "Galleryslash"
+   },
+   {
+      "component": Gallerytick,
+      "name": "Gallerytick"
+   },
+   {
+      "component": Game,
+      "name": "Game"
+   },
+   {
+      "component": Gameboy,
+      "name": "Gameboy"
+   },
+   {
+      "component": Gasstation,
+      "name": "Gasstation"
+   },
+   {
+      "component": Gemini,
+      "name": "Gemini"
+   },
+   {
+      "component": Gemini2,
+      "name": "Gemini2"
+   },
+   {
+      "component": Ghost,
+      "name": "Ghost"
+   },
+   {
+      "component": Gift,
+      "name": "Gift"
+   },
+   {
+      "component": Glass,
+      "name": "Glass"
+   },
+   {
+      "component": Glass1,
+      "name": "Glass1"
+   },
+   {
+      "component": Global,
+      "name": "Global"
+   },
+   {
+      "component": Globaledit,
+      "name": "Globaledit"
+   },
+   {
+      "component": Globalrefresh,
+      "name": "Globalrefresh"
+   },
+   {
+      "component": Globalsearch,
+      "name": "Globalsearch"
+   },
+   {
+      "component": Google,
+      "name": "Google"
+   },
+   {
+      "component": Googledrive,
+      "name": "Googledrive"
+   },
+   {
+      "component": Googleplay,
+      "name": "Googleplay"
+   },
+   {
+      "component": Gps,
+      "name": "Gps"
+   },
+   {
+      "component": Gpsslash,
+      "name": "Gpsslash"
+   },
+   {
+      "component": Grammerly,
+      "name": "Grammerly"
+   },
+   {
+      "component": Graph,
+      "name": "Graph"
+   },
+   {
+      "component": Grid1,
+      "name": "Grid1"
+   },
+   {
+      "component": Grid2,
+      "name": "Grid2"
+   },
+   {
+      "component": Grid3,
+      "name": "Grid3"
+   },
+   {
+      "component": Grid4,
+      "name": "Grid4"
+   },
+   {
+      "component": Grid5,
+      "name": "Grid5"
+   },
+   {
+      "component": Grid6,
+      "name": "Grid6"
+   },
+   {
+      "component": Grid7,
+      "name": "Grid7"
+   },
+   {
+      "component": Grid8,
+      "name": "Grid8"
+   },
+   {
+      "component": Grid9,
+      "name": "Grid9"
+   },
+   {
+      "component": Gridedit,
+      "name": "Gridedit"
+   },
+   {
+      "component": Grideraser,
+      "name": "Grideraser"
+   },
+   {
+      "component": Gridlock,
+      "name": "Gridlock"
+   },
+   {
+      "component": Group,
+      "name": "Group"
+   },
+   {
+      "component": Happyemoji,
+      "name": "Happyemoji"
+   },
+   {
+      "component": Harmony,
+      "name": "Harmony"
+   },
+   {
+      "component": Hashtag,
+      "name": "Hashtag"
+   },
+   {
+      "component": Hashtag1,
+      "name": "Hashtag1"
+   },
+   {
+      "component": Hashtagdown,
+      "name": "Hashtagdown"
+   },
+   {
+      "component": Hashtagup,
+      "name": "Hashtagup"
+   },
+   {
+      "component": Headphone,
+      "name": "Headphone"
+   },
+   {
+      "component": Headphones,
+      "name": "Headphones"
+   },
+   {
+      "component": Health,
+      "name": "Health"
+   },
+   {
+      "component": Heart,
+      "name": "Heart"
+   },
+   {
+      "component": Heartadd,
+      "name": "Heartadd"
+   },
+   {
+      "component": Heartcircle,
+      "name": "Heartcircle"
+   },
+   {
+      "component": Heartedit,
+      "name": "Heartedit"
+   },
+   {
+      "component": Heartremove,
+      "name": "Heartremove"
+   },
+   {
+      "component": Heartsearch,
+      "name": "Heartsearch"
+   },
+   {
+      "component": Heartslash,
+      "name": "Heartslash"
+   },
+   {
+      "component": Hearttick,
+      "name": "Hearttick"
+   },
+   {
+      "component": Hederahashgraph,
+      "name": "Hederahashgraph"
+   },
+   {
+      "component": Hex,
+      "name": "Hex"
+   },
+   {
+      "component": Hierarchy,
+      "name": "Hierarchy"
+   },
+   {
+      "component": Hierarchy2,
+      "name": "Hierarchy2"
+   },
+   {
+      "component": Hierarchy3,
+      "name": "Hierarchy3"
+   },
+   {
+      "component": Hierarchysquare,
+      "name": "Hierarchysquare"
+   },
+   {
+      "component": Hierarchysquare2,
+      "name": "Hierarchysquare2"
+   },
+   {
+      "component": Hierarchysquare3,
+      "name": "Hierarchysquare3"
+   },
+   {
+      "component": History,
+      "name": "History"
+   },
+   {
+      "component": Home,
+      "name": "Home"
+   },
+   {
+      "component": Home1,
+      "name": "Home1"
+   },
+   {
+      "component": Home2,
+      "name": "Home2"
+   },
+   {
+      "component": Homehashtag,
+      "name": "Homehashtag"
+   },
+   {
+      "component": Hometrenddown,
+      "name": "Hometrenddown"
+   },
+   {
+      "component": Hometrendup,
+      "name": "Hometrendup"
+   },
+   {
+      "component": Homewifi,
+      "name": "Homewifi"
+   },
+   {
+      "component": Hospital,
+      "name": "Hospital"
+   },
+   {
+      "component": House,
+      "name": "House"
+   },
+   {
+      "component": House2,
+      "name": "House2"
+   },
+   {
+      "component": Html5,
+      "name": "Html5"
+   },
+   {
+      "component": Huobitoken,
+      "name": "Huobitoken"
+   },
+   {
+      "component": Icon,
+      "name": "Icon"
+   },
+   {
+      "component": Illustrator,
+      "name": "Illustrator"
+   },
+   {
+      "component": Image,
+      "name": "Image"
+   },
+   {
+      "component": Import,
+      "name": "Import"
+   },
+   {
+      "component": Import1,
+      "name": "Import1"
+   },
+   {
+      "component": Import2,
+      "name": "Import2"
+   },
+   {
+      "component": Import3,
+      "name": "Import3"
+   },
+   {
+      "component": Infocircle,
+      "name": "Infocircle"
+   },
+   {
+      "component": Information,
+      "name": "Information"
+   },
+   {
+      "component": Instagram,
+      "name": "Instagram"
+   },
+   {
+      "component": Iost,
+      "name": "Iost"
+   },
+   {
+      "component": Javascript,
+      "name": "Javascript"
+   },
+   {
+      "component": Js,
+      "name": "Js"
+   },
+   {
+      "component": Judge,
+      "name": "Judge"
+   },
+   {
+      "component": Kanban,
+      "name": "Kanban"
+   },
+   {
+      "component": Key,
+      "name": "Key"
+   },
+   {
+      "component": Keyboard,
+      "name": "Keyboard"
+   },
+   {
+      "component": Keyboardopen,
+      "name": "Keyboardopen"
+   },
+   {
+      "component": Keysquare,
+      "name": "Keysquare"
+   },
+   {
+      "component": Kybernetwork,
+      "name": "Kybernetwork"
+   },
+   {
+      "component": Lamp,
+      "name": "Lamp"
+   },
+   {
+      "component": Lamp1,
+      "name": "Lamp1"
+   },
+   {
+      "component": Lampcharge,
+      "name": "Lampcharge"
+   },
+   {
+      "component": Lampon,
+      "name": "Lampon"
+   },
+   {
+      "component": Lampslash,
+      "name": "Lampslash"
+   },
+   {
+      "component": Languagecircle,
+      "name": "Languagecircle"
+   },
+   {
+      "component": Languagesquare,
+      "name": "Languagesquare"
+   },
+   {
+      "component": Layer,
+      "name": "Layer"
+   },
+   {
+      "component": Level,
+      "name": "Level"
+   },
+   {
+      "component": Lifebuoy,
+      "name": "Lifebuoy"
+   },
+   {
+      "component": Like,
+      "name": "Like"
+   },
+   {
+      "component": Like1,
+      "name": "Like1"
+   },
+   {
+      "component": Likedislike,
+      "name": "Likedislike"
+   },
+   {
+      "component": Likeshapes,
+      "name": "Likeshapes"
+   },
+   {
+      "component": Liketag,
+      "name": "Liketag"
+   },
+   {
+      "component": Link,
+      "name": "Link"
+   },
+   {
+      "component": Link1,
+      "name": "Link1"
+   },
+   {
+      "component": Link2,
+      "name": "Link2"
+   },
+   {
+      "component": Link21,
+      "name": "Link21"
+   },
+   {
+      "component": Linkcircle,
+      "name": "Linkcircle"
+   },
+   {
+      "component": Linksquare,
+      "name": "Linksquare"
+   },
+   {
+      "component": Litecoin,
+      "name": "Litecoin"
+   },
+   {
+      "component": Location,
+      "name": "Location"
+   },
+   {
+      "component": Locationadd,
+      "name": "Locationadd"
+   },
+   {
+      "component": Locationcross,
+      "name": "Locationcross"
+   },
+   {
+      "component": Locationminus,
+      "name": "Locationminus"
+   },
+   {
+      "component": Locationslash,
+      "name": "Locationslash"
+   },
+   {
+      "component": Locationtick,
+      "name": "Locationtick"
+   },
+   {
+      "component": Lock,
+      "name": "Lock"
+   },
+   {
+      "component": Lock1,
+      "name": "Lock1"
+   },
+   {
+      "component": Lockcircle,
+      "name": "Lockcircle"
+   },
+   {
+      "component": Lockslash,
+      "name": "Lockslash"
+   },
+   {
+      "component": Login,
+      "name": "Login"
+   },
+   {
+      "component": Login1,
+      "name": "Login1"
+   },
+   {
+      "component": Logout,
+      "name": "Logout"
+   },
+   {
+      "component": Logout1,
+      "name": "Logout1"
+   },
+   {
+      "component": Lovely,
+      "name": "Lovely"
+   },
+   {
+      "component": Magicpen,
+      "name": "Magicpen"
+   },
+   {
+      "component": Magicstar,
+      "name": "Magicstar"
+   },
+   {
+      "component": Maincomponent,
+      "name": "Maincomponent"
+   },
+   {
+      "component": Maker,
+      "name": "Maker"
+   },
+   {
+      "component": Man,
+      "name": "Man"
+   },
+   {
+      "component": Map,
+      "name": "Map"
+   },
+   {
+      "component": Map1,
+      "name": "Map1"
+   },
+   {
+      "component": Mask,
+      "name": "Mask"
+   },
+   {
+      "component": Mask1,
+      "name": "Mask1"
+   },
+   {
+      "component": Mask2,
+      "name": "Mask2"
+   },
+   {
+      "component": Math,
+      "name": "Math"
+   },
+   {
+      "component": Maximize,
+      "name": "Maximize"
+   },
+   {
+      "component": Maximize1,
+      "name": "Maximize1"
+   },
+   {
+      "component": Maximize2,
+      "name": "Maximize2"
+   },
+   {
+      "component": Maximize3,
+      "name": "Maximize3"
+   },
+   {
+      "component": Maximize4,
+      "name": "Maximize4"
+   },
+   {
+      "component": Maximize5,
+      "name": "Maximize5"
+   },
+   {
+      "component": Maximizecircle,
+      "name": "Maximizecircle"
+   },
+   {
+      "component": Medal,
+      "name": "Medal"
+   },
+   {
+      "component": Medalstar,
+      "name": "Medalstar"
+   },
+   {
+      "component": Menu,
+      "name": "Menu"
+   },
+   {
+      "component": Menu1,
+      "name": "Menu1"
+   },
+   {
+      "component": Menuboard,
+      "name": "Menuboard"
+   },
+   {
+      "component": Message,
+      "name": "Message"
+   },
+   {
+      "component": Message2,
+      "name": "Message2"
+   },
+   {
+      "component": Messageadd,
+      "name": "Messageadd"
+   },
+   {
+      "component": Messageadd1,
+      "name": "Messageadd1"
+   },
+   {
+      "component": Messagecircle,
+      "name": "Messagecircle"
+   },
+   {
+      "component": Messageedit,
+      "name": "Messageedit"
+   },
+   {
+      "component": Messagefavorite,
+      "name": "Messagefavorite"
+   },
+   {
+      "component": Messageminus,
+      "name": "Messageminus"
+   },
+   {
+      "component": Messagenotif,
+      "name": "Messagenotif"
+   },
+   {
+      "component": Messageprogramming,
+      "name": "Messageprogramming"
+   },
+   {
+      "component": Messagequestion,
+      "name": "Messagequestion"
+   },
+   {
+      "component": Messageremove,
+      "name": "Messageremove"
+   },
+   {
+      "component": Messages,
+      "name": "Messages"
+   },
+   {
+      "component": Messages1,
+      "name": "Messages1"
+   },
+   {
+      "component": Messages2,
+      "name": "Messages2"
+   },
+   {
+      "component": Messages3,
+      "name": "Messages3"
+   },
+   {
+      "component": Messagesearch,
+      "name": "Messagesearch"
+   },
+   {
+      "component": Messagesquare,
+      "name": "Messagesquare"
+   },
+   {
+      "component": Messagetext,
+      "name": "Messagetext"
+   },
+   {
+      "component": Messagetext1,
+      "name": "Messagetext1"
+   },
+   {
+      "component": Messagetick,
+      "name": "Messagetick"
+   },
+   {
+      "component": Messagetime,
+      "name": "Messagetime"
+   },
+   {
+      "component": Messenger,
+      "name": "Messenger"
+   },
+   {
+      "component": Microphone,
+      "name": "Microphone"
+   },
+   {
+      "component": Microphone2,
+      "name": "Microphone2"
+   },
+   {
+      "component": Microphoneslash,
+      "name": "Microphoneslash"
+   },
+   {
+      "component": Microphoneslash1,
+      "name": "Microphoneslash1"
+   },
+   {
+      "component": Microscope,
+      "name": "Microscope"
+   },
+   {
+      "component": Milk,
+      "name": "Milk"
+   },
+   {
+      "component": Minimusicsqaure,
+      "name": "Minimusicsqaure"
+   },
+   {
+      "component": Minus,
+      "name": "Minus"
+   },
+   {
+      "component": Minuscirlce,
+      "name": "Minuscirlce"
+   },
+   {
+      "component": Minussquare,
+      "name": "Minussquare"
+   },
+   {
+      "component": Mirror,
+      "name": "Mirror"
+   },
+   {
+      "component": Mirroringscreen,
+      "name": "Mirroringscreen"
+   },
+   {
+      "component": Mobile,
+      "name": "Mobile"
+   },
+   {
+      "component": Mobileprogramming,
+      "name": "Mobileprogramming"
+   },
+   {
+      "component": Monero,
+      "name": "Monero"
+   },
+   {
+      "component": Money,
+      "name": "Money"
+   },
+   {
+      "component": Money2,
+      "name": "Money2"
+   },
+   {
+      "component": Money3,
+      "name": "Money3"
+   },
+   {
+      "component": Money4,
+      "name": "Money4"
+   },
+   {
+      "component": Moneyadd,
+      "name": "Moneyadd"
+   },
+   {
+      "component": Moneychange,
+      "name": "Moneychange"
+   },
+   {
+      "component": Moneyforbidden,
+      "name": "Moneyforbidden"
+   },
+   {
+      "component": Moneyrecive,
+      "name": "Moneyrecive"
+   },
+   {
+      "component": Moneyremove,
+      "name": "Moneyremove"
+   },
+   {
+      "component": Moneys,
+      "name": "Moneys"
+   },
+   {
+      "component": Moneysend,
+      "name": "Moneysend"
+   },
+   {
+      "component": Moneytick,
+      "name": "Moneytick"
+   },
+   {
+      "component": Moneytime,
+      "name": "Moneytime"
+   },
+   {
+      "component": Monitor,
+      "name": "Monitor"
+   },
+   {
+      "component": Monitormobbile,
+      "name": "Monitormobbile"
+   },
+   {
+      "component": Monitorrecorder,
+      "name": "Monitorrecorder"
+   },
+   {
+      "component": Moon,
+      "name": "Moon"
+   },
+   {
+      "component": More,
+      "name": "More"
+   },
+   {
+      "component": More2,
+      "name": "More2"
+   },
+   {
+      "component": Morecircle,
+      "name": "Morecircle"
+   },
+   {
+      "component": Moresquare,
+      "name": "Moresquare"
+   },
+   {
+      "component": Mouse,
+      "name": "Mouse"
+   },
+   {
+      "component": Mouse1,
+      "name": "Mouse1"
+   },
+   {
+      "component": Mousecircle,
+      "name": "Mousecircle"
+   },
+   {
+      "component": Mousesquare,
+      "name": "Mousesquare"
+   },
+   {
+      "component": Music,
+      "name": "Music"
+   },
+   {
+      "component": Musiccircle,
+      "name": "Musiccircle"
+   },
+   {
+      "component": Musicdashboard,
+      "name": "Musicdashboard"
+   },
+   {
+      "component": Musicfilter,
+      "name": "Musicfilter"
+   },
+   {
+      "component": Musiclibrary2,
+      "name": "Musiclibrary2"
+   },
+   {
+      "component": Musicnote,
+      "name": "Musicnote"
+   },
+   {
+      "component": Musicplay,
+      "name": "Musicplay"
+   },
+   {
+      "component": Musicplaylist,
+      "name": "Musicplaylist"
+   },
+   {
+      "component": Musicsquare,
+      "name": "Musicsquare"
+   },
+   {
+      "component": Musicsquareadd,
+      "name": "Musicsquareadd"
+   },
+   {
+      "component": Musicsquareremove,
+      "name": "Musicsquareremove"
+   },
+   {
+      "component": Musicsquaresearch,
+      "name": "Musicsquaresearch"
+   },
+   {
+      "component": Nebulas,
+      "name": "Nebulas"
+   },
+   {
+      "component": Nem,
+      "name": "Nem"
+   },
+   {
+      "component": Nexo,
+      "name": "Nexo"
+   },
+   {
+      "component": Next,
+      "name": "Next"
+   },
+   {
+      "component": Note,
+      "name": "Note"
+   },
+   {
+      "component": Note1,
+      "name": "Note1"
+   },
+   {
+      "component": Note2,
+      "name": "Note2"
+   },
+   {
+      "component": Note3,
+      "name": "Note3"
+   },
+   {
+      "component": Noteadd,
+      "name": "Noteadd"
+   },
+   {
+      "component": Notefavorite,
+      "name": "Notefavorite"
+   },
+   {
+      "component": Noteremove,
+      "name": "Noteremove"
+   },
+   {
+      "component": Notesquare,
+      "name": "Notesquare"
+   },
+   {
+      "component": Notetext,
+      "name": "Notetext"
+   },
+   {
+      "component": Notification,
+      "name": "Notification"
+   },
+   {
+      "component": Notification1,
+      "name": "Notification1"
+   },
+   {
+      "component": Notificationbing,
+      "name": "Notificationbing"
+   },
+   {
+      "component": Notificationcircle,
+      "name": "Notificationcircle"
+   },
+   {
+      "component": Notificationfavorite,
+      "name": "Notificationfavorite"
+   },
+   {
+      "component": Notificationstatus,
+      "name": "Notificationstatus"
+   },
+   {
+      "component": Oceanprotocol,
+      "name": "Oceanprotocol"
+   },
+   {
+      "component": Okb,
+      "name": "Okb"
+   },
+   {
+      "component": Omegacircle,
+      "name": "Omegacircle"
+   },
+   {
+      "component": Omegasquare,
+      "name": "Omegasquare"
+   },
+   {
+      "component": Ontology,
+      "name": "Ontology"
+   },
+   {
+      "component": Paintbucket,
+      "name": "Paintbucket"
+   },
+   {
+      "component": Paperclip,
+      "name": "Paperclip"
+   },
+   {
+      "component": Paperclip2,
+      "name": "Paperclip2"
+   },
+   {
+      "component": Passwordcheck,
+      "name": "Passwordcheck"
+   },
+   {
+      "component": Path,
+      "name": "Path"
+   },
+   {
+      "component": Path2,
+      "name": "Path2"
+   },
+   {
+      "component": Pathsquare,
+      "name": "Pathsquare"
+   },
+   {
+      "component": Pause,
+      "name": "Pause"
+   },
+   {
+      "component": Pausecircle,
+      "name": "Pausecircle"
+   },
+   {
+      "component": Paypal,
+      "name": "Paypal"
+   },
+   {
+      "component": Penadd,
+      "name": "Penadd"
+   },
+   {
+      "component": Penclose,
+      "name": "Penclose"
+   },
+   {
+      "component": Penremove,
+      "name": "Penremove"
+   },
+   {
+      "component": Pentool,
+      "name": "Pentool"
+   },
+   {
+      "component": Pentool2,
+      "name": "Pentool2"
+   },
+   {
+      "component": People,
+      "name": "People"
+   },
+   {
+      "component": Percentagecircle,
+      "name": "Percentagecircle"
+   },
+   {
+      "component": Percentagesquare,
+      "name": "Percentagesquare"
+   },
+   {
+      "component": Personalcard,
+      "name": "Personalcard"
+   },
+   {
+      "component": Pet,
+      "name": "Pet"
+   },
+   {
+      "component": Pharagraphspacing,
+      "name": "Pharagraphspacing"
+   },
+   {
+      "component": Photoshop,
+      "name": "Photoshop"
+   },
+   {
+      "component": Pictureframe,
+      "name": "Pictureframe"
+   },
+   {
+      "component": Play,
+      "name": "Play"
+   },
+   {
+      "component": Playadd,
+      "name": "Playadd"
+   },
+   {
+      "component": Playcircle,
+      "name": "Playcircle"
+   },
+   {
+      "component": Playcricle,
+      "name": "Playcricle"
+   },
+   {
+      "component": Playremove,
+      "name": "Playremove"
+   },
+   {
+      "component": Point,
+      "name": "Point"
+   },
+   {
+      "component": Polkadot,
+      "name": "Polkadot"
+   },
+   {
+      "component": Polygon,
+      "name": "Polygon"
+   },
+   {
+      "component": Polyswarm,
+      "name": "Polyswarm"
+   },
+   {
+      "component": Presentionchart,
+      "name": "Presentionchart"
+   },
+   {
+      "component": Previous,
+      "name": "Previous"
+   },
+   {
+      "component": Printer,
+      "name": "Printer"
+   },
+   {
+      "component": Printerslash,
+      "name": "Printerslash"
+   },
+   {
+      "component": Profile,
+      "name": "Profile"
+   },
+   {
+      "component": Profile2user,
+      "name": "Profile2user"
+   },
+   {
+      "component": Profileadd,
+      "name": "Profileadd"
+   },
+   {
+      "component": Profilecircle,
+      "name": "Profilecircle"
+   },
+   {
+      "component": Profiledelete,
+      "name": "Profiledelete"
+   },
+   {
+      "component": Profileremove,
+      "name": "Profileremove"
+   },
+   {
+      "component": Profiletick,
+      "name": "Profiletick"
+   },
+   {
+      "component": Programmingarrow,
+      "name": "Programmingarrow"
+   },
+   {
+      "component": Programmingarrows,
+      "name": "Programmingarrows"
+   },
+   {
+      "component": Python,
+      "name": "Python"
+   },
+   {
+      "component": Quant,
+      "name": "Quant"
+   },
+   {
+      "component": Quotedown,
+      "name": "Quotedown"
+   },
+   {
+      "component": Quotedowncircle,
+      "name": "Quotedowncircle"
+   },
+   {
+      "component": Quotedownsquare,
+      "name": "Quotedownsquare"
+   },
+   {
+      "component": Quoteup,
+      "name": "Quoteup"
+   },
+   {
+      "component": Quoteupcircle,
+      "name": "Quoteupcircle"
+   },
+   {
+      "component": Quoteupsquare,
+      "name": "Quoteupsquare"
+   },
+   {
+      "component": Radar,
+      "name": "Radar"
+   },
+   {
+      "component": Radar1,
+      "name": "Radar1"
+   },
+   {
+      "component": Radar2,
+      "name": "Radar2"
+   },
+   {
+      "component": Radio,
+      "name": "Radio"
+   },
+   {
+      "component": Ram,
+      "name": "Ram"
+   },
+   {
+      "component": Ram2,
+      "name": "Ram2"
+   },
+   {
+      "component": Ranking,
+      "name": "Ranking"
+   },
+   {
+      "component": Ranking1,
+      "name": "Ranking1"
+   },
+   {
+      "component": Receipt,
+      "name": "Receipt"
+   },
+   {
+      "component": Receipt1,
+      "name": "Receipt1"
+   },
+   {
+      "component": Receipt2,
+      "name": "Receipt2"
+   },
+   {
+      "component": Receipt21,
+      "name": "Receipt21"
+   },
+   {
+      "component": Receiptadd,
+      "name": "Receiptadd"
+   },
+   {
+      "component": Receiptdiscount,
+      "name": "Receiptdiscount"
+   },
+   {
+      "component": Receiptdisscount,
+      "name": "Receiptdisscount"
+   },
+   {
+      "component": Receiptedit,
+      "name": "Receiptedit"
+   },
+   {
+      "component": Receiptitem,
+      "name": "Receiptitem"
+   },
+   {
+      "component": Receiptminus,
+      "name": "Receiptminus"
+   },
+   {
+      "component": Receiptsearch,
+      "name": "Receiptsearch"
+   },
+   {
+      "component": Receiptsquare,
+      "name": "Receiptsquare"
+   },
+   {
+      "component": Receipttext,
+      "name": "Receipttext"
+   },
+   {
+      "component": Received,
+      "name": "Received"
+   },
+   {
+      "component": Receivesquare,
+      "name": "Receivesquare"
+   },
+   {
+      "component": Receivesquare2,
+      "name": "Receivesquare2"
+   },
+   {
+      "component": Record,
+      "name": "Record"
+   },
+   {
+      "component": Recordcircle,
+      "name": "Recordcircle"
+   },
+   {
+      "component": Recoveryconvert,
+      "name": "Recoveryconvert"
+   },
+   {
+      "component": Redo,
+      "name": "Redo"
+   },
+   {
+      "component": Refresh,
+      "name": "Refresh"
+   },
+   {
+      "component": Refresh2,
+      "name": "Refresh2"
+   },
+   {
+      "component": Refreshcircle,
+      "name": "Refreshcircle"
+   },
+   {
+      "component": Refreshleftsquare,
+      "name": "Refreshleftsquare"
+   },
+   {
+      "component": Refreshrightsquare,
+      "name": "Refreshrightsquare"
+   },
+   {
+      "component": Refreshsquare2,
+      "name": "Refreshsquare2"
+   },
+   {
+      "component": Repeat,
+      "name": "Repeat"
+   },
+   {
+      "component": Repeatcircle,
+      "name": "Repeatcircle"
+   },
+   {
+      "component": Repeatemusic,
+      "name": "Repeatemusic"
+   },
+   {
+      "component": Repeateone,
+      "name": "Repeateone"
+   },
+   {
+      "component": Reserve,
+      "name": "Reserve"
+   },
+   {
+      "component": Rotate3d,
+      "name": "Rotate3d"
+   },
+   {
+      "component": Rotateleft,
+      "name": "Rotateleft"
+   },
+   {
+      "component": Rotateleft1,
+      "name": "Rotateleft1"
+   },
+   {
+      "component": Rotateright,
+      "name": "Rotateright"
+   },
+   {
+      "component": Rotateright1,
+      "name": "Rotateright1"
+   },
+   {
+      "component": Routesquare,
+      "name": "Routesquare"
+   },
+   {
+      "component": Routing,
+      "name": "Routing"
+   },
+   {
+      "component": Routing2,
+      "name": "Routing2"
+   },
+   {
+      "component": Rowhorizontal,
+      "name": "Rowhorizontal"
+   },
+   {
+      "component": Rowvertical,
+      "name": "Rowvertical"
+   },
+   {
+      "component": Ruler,
+      "name": "Ruler"
+   },
+   {
+      "component": Rulerpen,
+      "name": "Rulerpen"
+   },
+   {
+      "component": Safehome,
+      "name": "Safehome"
+   },
+   {
+      "component": Sagittarius,
+      "name": "Sagittarius"
+   },
+   {
+      "component": Save2,
+      "name": "Save2"
+   },
+   {
+      "component": Saveadd,
+      "name": "Saveadd"
+   },
+   {
+      "component": Saveminus,
+      "name": "Saveminus"
+   },
+   {
+      "component": Saveremove,
+      "name": "Saveremove"
+   },
+   {
+      "component": Scan,
+      "name": "Scan"
+   },
+   {
+      "component": Scanbarcode,
+      "name": "Scanbarcode"
+   },
+   {
+      "component": Scanner,
+      "name": "Scanner"
+   },
+   {
+      "component": Scanning,
+      "name": "Scanning"
+   },
+   {
+      "component": Scissor,
+      "name": "Scissor"
+   },
+   {
+      "component": Scissor1,
+      "name": "Scissor1"
+   },
+   {
+      "component": Screenmirroring,
+      "name": "Screenmirroring"
+   },
+   {
+      "component": Scroll,
+      "name": "Scroll"
+   },
+   {
+      "component": Searchfavorite,
+      "name": "Searchfavorite"
+   },
+   {
+      "component": Searchfavorite1,
+      "name": "Searchfavorite1"
+   },
+   {
+      "component": Searchnormal,
+      "name": "Searchnormal"
+   },
+   {
+      "component": Searchnormal1,
+      "name": "Searchnormal1"
+   },
+   {
+      "component": Searchstatus,
+      "name": "Searchstatus"
+   },
+   {
+      "component": Searchstatus1,
+      "name": "Searchstatus1"
+   },
+   {
+      "component": Searchzoomin,
+      "name": "Searchzoomin"
+   },
+   {
+      "component": Searchzoomin1,
+      "name": "Searchzoomin1"
+   },
+   {
+      "component": Searchzoomout,
+      "name": "Searchzoomout"
+   },
+   {
+      "component": Searchzoomout1,
+      "name": "Searchzoomout1"
+   },
+   {
+      "component": Security,
+      "name": "Security"
+   },
+   {
+      "component": Securitycard,
+      "name": "Securitycard"
+   },
+   {
+      "component": Securitysafe,
+      "name": "Securitysafe"
+   },
+   {
+      "component": Securitytime,
+      "name": "Securitytime"
+   },
+   {
+      "component": Securityuser,
+      "name": "Securityuser"
+   },
+   {
+      "component": Send,
+      "name": "Send"
+   },
+   {
+      "component": Send1,
+      "name": "Send1"
+   },
+   {
+      "component": Send2,
+      "name": "Send2"
+   },
+   {
+      "component": Sendsqaure2,
+      "name": "Sendsqaure2"
+   },
+   {
+      "component": Sendsquare,
+      "name": "Sendsquare"
+   },
+   {
+      "component": Setting,
+      "name": "Setting"
+   },
+   {
+      "component": Setting2,
+      "name": "Setting2"
+   },
+   {
+      "component": Setting3,
+      "name": "Setting3"
+   },
+   {
+      "component": Setting4,
+      "name": "Setting4"
+   },
+   {
+      "component": Setting5,
+      "name": "Setting5"
+   },
+   {
+      "component": Settings,
+      "name": "Settings"
+   },
+   {
+      "component": Shapes,
+      "name": "Shapes"
+   },
+   {
+      "component": Shapes1,
+      "name": "Shapes1"
+   },
+   {
+      "component": Share,
+      "name": "Share"
+   },
+   {
+      "component": Shield,
+      "name": "Shield"
+   },
+   {
+      "component": Shieldcross,
+      "name": "Shieldcross"
+   },
+   {
+      "component": Shieldsearch,
+      "name": "Shieldsearch"
+   },
+   {
+      "component": Shieldsecurity,
+      "name": "Shieldsecurity"
+   },
+   {
+      "component": Shieldslash,
+      "name": "Shieldslash"
+   },
+   {
+      "component": Shieldtick,
+      "name": "Shieldtick"
+   },
+   {
+      "component": Ship,
+      "name": "Ship"
+   },
+   {
+      "component": Shop,
+      "name": "Shop"
+   },
+   {
+      "component": Shopadd,
+      "name": "Shopadd"
+   },
+   {
+      "component": Shoppingbag,
+      "name": "Shoppingbag"
+   },
+   {
+      "component": Shoppingcart,
+      "name": "Shoppingcart"
+   },
+   {
+      "component": Shopremove,
+      "name": "Shopremove"
+   },
+   {
+      "component": Shuffle,
+      "name": "Shuffle"
+   },
+   {
+      "component": Siacoin,
+      "name": "Siacoin"
+   },
+   {
+      "component": Sidebarbottom,
+      "name": "Sidebarbottom"
+   },
+   {
+      "component": Sidebarleft,
+      "name": "Sidebarleft"
+   },
+   {
+      "component": Sidebarright,
+      "name": "Sidebarright"
+   },
+   {
+      "component": Sidebartop,
+      "name": "Sidebartop"
+   },
+   {
+      "component": Signpost,
+      "name": "Signpost"
+   },
+   {
+      "component": Simcard,
+      "name": "Simcard"
+   },
+   {
+      "component": Simcard1,
+      "name": "Simcard1"
+   },
+   {
+      "component": Simcard2,
+      "name": "Simcard2"
+   },
+   {
+      "component": Size,
+      "name": "Size"
+   },
+   {
+      "component": Slack,
+      "name": "Slack"
+   },
+   {
+      "component": Slash,
+      "name": "Slash"
+   },
+   {
+      "component": Slider,
+      "name": "Slider"
+   },
+   {
+      "component": Sliderhorizontal,
+      "name": "Sliderhorizontal"
+   },
+   {
+      "component": Sliderhorizontal1,
+      "name": "Sliderhorizontal1"
+   },
+   {
+      "component": Slidervertical,
+      "name": "Slidervertical"
+   },
+   {
+      "component": Slidervertical1,
+      "name": "Slidervertical1"
+   },
+   {
+      "component": Smallcaps,
+      "name": "Smallcaps"
+   },
+   {
+      "component": Smartcar,
+      "name": "Smartcar"
+   },
+   {
+      "component": Smarthome,
+      "name": "Smarthome"
+   },
+   {
+      "component": Smileys,
+      "name": "Smileys"
+   },
+   {
+      "component": Sms,
+      "name": "Sms"
+   },
+   {
+      "component": Smsedit,
+      "name": "Smsedit"
+   },
+   {
+      "component": Smsnotification,
+      "name": "Smsnotification"
+   },
+   {
+      "component": Smssearch,
+      "name": "Smssearch"
+   },
+   {
+      "component": Smsstar,
+      "name": "Smsstar"
+   },
+   {
+      "component": Smstracking,
+      "name": "Smstracking"
+   },
+   {
+      "component": Snapchat,
+      "name": "Snapchat"
+   },
+   {
+      "component": Solana,
+      "name": "Solana"
+   },
+   {
+      "component": Sort,
+      "name": "Sort"
+   },
+   {
+      "component": Sound,
+      "name": "Sound"
+   },
+   {
+      "component": Speaker,
+      "name": "Speaker"
+   },
+   {
+      "component": Speedometer,
+      "name": "Speedometer"
+   },
+   {
+      "component": Spotify,
+      "name": "Spotify"
+   },
+   {
+      "component": Square3d,
+      "name": "Square3d"
+   },
+   {
+      "component": Squares3,
+      "name": "Squares3"
+   },
+   {
+      "component": Stacks,
+      "name": "Stacks"
+   },
+   {
+      "component": Star,
+      "name": "Star"
+   },
+   {
+      "component": Star1,
+      "name": "Star1"
+   },
+   {
+      "component": Starslash,
+      "name": "Starslash"
+   },
+   {
+      "component": Status,
+      "name": "Status"
+   },
+   {
+      "component": Statusup,
+      "name": "Statusup"
+   },
+   {
+      "component": Stellar,
+      "name": "Stellar"
+   },
+   {
+      "component": Sticker,
+      "name": "Sticker"
+   },
+   {
+      "component": Stickynote,
+      "name": "Stickynote"
+   },
+   {
+      "component": Stop,
+      "name": "Stop"
+   },
+   {
+      "component": Stopcircle,
+      "name": "Stopcircle"
+   },
+   {
+      "component": Story,
+      "name": "Story"
+   },
+   {
+      "component": Strongbox,
+      "name": "Strongbox"
+   },
+   {
+      "component": Strongbox2,
+      "name": "Strongbox2"
+   },
+   {
+      "component": Subtitle,
+      "name": "Subtitle"
+   },
+   {
+      "component": Sun,
+      "name": "Sun"
+   },
+   {
+      "component": Sun1,
+      "name": "Sun1"
+   },
+   {
+      "component": Sunfog,
+      "name": "Sunfog"
+   },
+   {
+      "component": Support24,
+      "name": "Support24"
+   },
+   {
+      "component": Tag,
+      "name": "Tag"
+   },
+   {
+      "component": Tag2,
+      "name": "Tag2"
+   },
+   {
+      "component": Tagcross,
+      "name": "Tagcross"
+   },
+   {
+      "component": Tagright,
+      "name": "Tagright"
+   },
+   {
+      "component": Taguser,
+      "name": "Taguser"
+   },
+   {
+      "component": Task,
+      "name": "Task"
+   },
+   {
+      "component": Tasksquare,
+      "name": "Tasksquare"
+   },
+   {
+      "component": Teacher,
+      "name": "Teacher"
+   },
+   {
+      "component": Tenx,
+      "name": "Tenx"
+   },
+   {
+      "component": Tether,
+      "name": "Tether"
+   },
+   {
+      "component": Text,
+      "name": "Text"
+   },
+   {
+      "component": Textaligncenter,
+      "name": "Textaligncenter"
+   },
+   {
+      "component": Textalignjustifycenter,
+      "name": "Textalignjustifycenter"
+   },
+   {
+      "component": Textalignjustifyleft,
+      "name": "Textalignjustifyleft"
+   },
+   {
+      "component": Textalignjustifyright,
+      "name": "Textalignjustifyright"
+   },
+   {
+      "component": Textalignleft,
+      "name": "Textalignleft"
+   },
+   {
+      "component": Textalignright,
+      "name": "Textalignright"
+   },
+   {
+      "component": Textblock,
+      "name": "Textblock"
+   },
+   {
+      "component": Textbold,
+      "name": "Textbold"
+   },
+   {
+      "component": Textitalic,
+      "name": "Textitalic"
+   },
+   {
+      "component": Textunderline,
+      "name": "Textunderline"
+   },
+   {
+      "component": Thegraph,
+      "name": "Thegraph"
+   },
+   {
+      "component": Theta,
+      "name": "Theta"
+   },
+   {
+      "component": Thorchain,
+      "name": "Thorchain"
+   },
+   {
+      "component": Tickcircle,
+      "name": "Tickcircle"
+   },
+   {
+      "component": Ticket,
+      "name": "Ticket"
+   },
+   {
+      "component": Ticket2,
+      "name": "Ticket2"
+   },
+   {
+      "component": Ticketdiscount,
+      "name": "Ticketdiscount"
+   },
+   {
+      "component": Ticketexpired,
+      "name": "Ticketexpired"
+   },
+   {
+      "component": Ticketstar,
+      "name": "Ticketstar"
+   },
+   {
+      "component": Ticksquare,
+      "name": "Ticksquare"
+   },
+   {
+      "component": Timer,
+      "name": "Timer"
+   },
+   {
+      "component": Timer1,
+      "name": "Timer1"
+   },
+   {
+      "component": Timerpause,
+      "name": "Timerpause"
+   },
+   {
+      "component": Timerstart,
+      "name": "Timerstart"
+   },
+   {
+      "component": Toggleoff,
+      "name": "Toggleoff"
+   },
+   {
+      "component": Toggleoffcircle,
+      "name": "Toggleoffcircle"
+   },
+   {
+      "component": Toggleon,
+      "name": "Toggleon"
+   },
+   {
+      "component": Toggleoncircle,
+      "name": "Toggleoncircle"
+   },
+   {
+      "component": Trade,
+      "name": "Trade"
+   },
+   {
+      "component": Transactionminus,
+      "name": "Transactionminus"
+   },
+   {
+      "component": Translate,
+      "name": "Translate"
+   },
+   {
+      "component": Trash,
+      "name": "Trash"
+   },
+   {
+      "component": Tree,
+      "name": "Tree"
+   },
+   {
+      "component": Trello,
+      "name": "Trello"
+   },
+   {
+      "component": Trenddown,
+      "name": "Trenddown"
+   },
+   {
+      "component": Trendup,
+      "name": "Trendup"
+   },
+   {
+      "component": Triangle,
+      "name": "Triangle"
+   },
+   {
+      "component": Triangle2,
+      "name": "Triangle2"
+   },
+   {
+      "component": Trontron,
+      "name": "Trontron"
+   },
+   {
+      "component": Truck,
+      "name": "Truck"
+   },
+   {
+      "component": Truckfast,
+      "name": "Truckfast"
+   },
+   {
+      "component": Truckremove,
+      "name": "Truckremove"
+   },
+   {
+      "component": Trucktick,
+      "name": "Trucktick"
+   },
+   {
+      "component": Trucktime,
+      "name": "Trucktime"
+   },
+   {
+      "component": Trushsquare,
+      "name": "Trushsquare"
+   },
+   {
+      "component": Twitch,
+      "name": "Twitch"
+   },
+   {
+      "component": Ui8,
+      "name": "Ui8"
+   },
+   {
+      "component": Undo,
+      "name": "Undo"
+   },
+   {
+      "component": Unlimited,
+      "name": "Unlimited"
+   },
+   {
+      "component": Unlock,
+      "name": "Unlock"
+   },
+   {
+      "component": Usdcoin,
+      "name": "Usdcoin"
+   },
+   {
+      "component": User,
+      "name": "User"
+   },
+   {
+      "component": Useradd,
+      "name": "Useradd"
+   },
+   {
+      "component": Usercirlceadd,
+      "name": "Usercirlceadd"
+   },
+   {
+      "component": Useredit,
+      "name": "Useredit"
+   },
+   {
+      "component": Userminus,
+      "name": "Userminus"
+   },
+   {
+      "component": Useroctagon,
+      "name": "Useroctagon"
+   },
+   {
+      "component": Userremove,
+      "name": "Userremove"
+   },
+   {
+      "component": Usersearch,
+      "name": "Usersearch"
+   },
+   {
+      "component": Usersquare,
+      "name": "Usersquare"
+   },
+   {
+      "component": Usertag,
+      "name": "Usertag"
+   },
+   {
+      "component": Usertick,
+      "name": "Usertick"
+   },
+   {
+      "component": Velas,
+      "name": "Velas"
+   },
+   {
+      "component": Verify,
+      "name": "Verify"
+   },
+   {
+      "component": Vibe,
+      "name": "Vibe"
+   },
+   {
+      "component": Video,
+      "name": "Video"
+   },
+   {
+      "component": Videoadd,
+      "name": "Videoadd"
+   },
+   {
+      "component": Videocircle,
+      "name": "Videocircle"
+   },
+   {
+      "component": Videohorizontal,
+      "name": "Videohorizontal"
+   },
+   {
+      "component": Videooctagon,
+      "name": "Videooctagon"
+   },
+   {
+      "component": Videoplay,
+      "name": "Videoplay"
+   },
+   {
+      "component": Videoremove,
+      "name": "Videoremove"
+   },
+   {
+      "component": Videoslash,
+      "name": "Videoslash"
+   },
+   {
+      "component": Videosquare,
+      "name": "Videosquare"
+   },
+   {
+      "component": Videotick,
+      "name": "Videotick"
+   },
+   {
+      "component": Videotime,
+      "name": "Videotime"
+   },
+   {
+      "component": Videovertical,
+      "name": "Videovertical"
+   },
+   {
+      "component": Voicecricle,
+      "name": "Voicecricle"
+   },
+   {
+      "component": Voicesquare,
+      "name": "Voicesquare"
+   },
+   {
+      "component": Volume,
+      "name": "Volume"
+   },
+   {
+      "component": Volumecross,
+      "name": "Volumecross"
+   },
+   {
+      "component": Volumehigh,
+      "name": "Volumehigh"
+   },
+   {
+      "component": Volumelow,
+      "name": "Volumelow"
+   },
+   {
+      "component": Volumelow1,
+      "name": "Volumelow1"
+   },
+   {
+      "component": Volumemute,
+      "name": "Volumemute"
+   },
+   {
+      "component": Volumeslash,
+      "name": "Volumeslash"
+   },
+   {
+      "component": Volumeup,
+      "name": "Volumeup"
+   },
+   {
+      "component": Vuesax,
+      "name": "Vuesax"
+   },
+   {
+      "component": Wallet,
+      "name": "Wallet"
+   },
+   {
+      "component": Wallet1,
+      "name": "Wallet1"
+   },
+   {
+      "component": Wallet2,
+      "name": "Wallet2"
+   },
+   {
+      "component": Wallet3,
+      "name": "Wallet3"
+   },
+   {
+      "component": Walletadd,
+      "name": "Walletadd"
+   },
+   {
+      "component": Walletadd1,
+      "name": "Walletadd1"
+   },
+   {
+      "component": Walletcheck,
+      "name": "Walletcheck"
+   },
+   {
+      "component": Walletminus,
+      "name": "Walletminus"
+   },
+   {
+      "component": Walletmoney,
+      "name": "Walletmoney"
+   },
+   {
+      "component": Walletremove,
+      "name": "Walletremove"
+   },
+   {
+      "component": Walletsearch,
+      "name": "Walletsearch"
+   },
+   {
+      "component": Wanchain,
+      "name": "Wanchain"
+   },
+   {
+      "component": Wanchain1,
+      "name": "Wanchain1"
+   },
+   {
+      "component": Warning2,
+      "name": "Warning2"
+   },
+   {
+      "component": Watch,
+      "name": "Watch"
+   },
+   {
+      "component": Watchstatus,
+      "name": "Watchstatus"
+   },
+   {
+      "component": Weight,
+      "name": "Weight"
+   },
+   {
+      "component": Weight1,
+      "name": "Weight1"
+   },
+   {
+      "component": Whatsapp,
+      "name": "Whatsapp"
+   },
+   {
+      "component": Wifi,
+      "name": "Wifi"
+   },
+   {
+      "component": Wifisquare,
+      "name": "Wifisquare"
+   },
+   {
+      "component": Wind,
+      "name": "Wind"
+   },
+   {
+      "component": Wind2,
+      "name": "Wind2"
+   },
+   {
+      "component": Windows,
+      "name": "Windows"
+   },
+   {
+      "component": Wing,
+      "name": "Wing"
+   },
+   {
+      "component": Woman,
+      "name": "Woman"
+   },
+   {
+      "component": Xd,
+      "name": "Xd"
+   },
+   {
+      "component": Xiaomi,
+      "name": "Xiaomi"
+   },
+   {
+      "component": Xrp,
+      "name": "Xrp"
+   },
+   {
+      "component": Youtube,
+      "name": "Youtube"
+   },
+   {
+      "component": Zel,
+      "name": "Zel"
+   },
+   {
+      "component": Zoom,
+      "name": "Zoom"
+   },
+]
