@@ -1,58 +1,1089 @@
-# create-svelte
+<a href='https://ko-fi.com/rubenmach' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+[Preview Isaxvelte-Pro](https://isaxvelte-pro.vercel.app)
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+# Iconsax for Svelte
 
-## Creating a project
+This is an icon library for Svelte based on [iconsax](https://iconsax.io/). These icons are adapted to inherit the colors and sizes, you can use it as if it were a letter font.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Take advantage of [Sveltekit](https://kit.svelte.dev) to be able to use the icons from [iconsax](https://iconsax.io/) with Isaxvelte-Pro 😁👌.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Install the library
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm i isaxvelte-pro@latest
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+## Basic usage
 
-## Building
+```html
+<script>
+	import User from 'isaxvelte-pro/User';
+</script>
 
-To build your library:
+<!-- By default the icon variant is linear -->
+<p><User /> User</p>
 
-```bash
-npm run package
+<style>
+	p {
+		color: red;
+		font-size: 45px;
+	}
+</style>
 ```
 
-To create a production version of your showcase app:
+```html
+<script>
+	import User from 'isaxvelte-pro/User';
+</script>
 
-```bash
-npm run build
+<p><User variant="linear" /> User linear</p>
+<p><User variant="bold" /> User bold</p>
+<p><User variant="broken" /> User broken</p>
+<p><User variant="bulk" /> User bulk</p>
+<p><User variant="outline" /> User outline</p>
+<p><User variant="twotone" /> User twotone</p>
+
+<style>
+	p {
+		color: red;
+		font-size: 45px;
+	}
+</style>
 ```
 
-You can preview the production build with `npm run preview`.
+## More examples
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```html
+<script>
+	import User from 'isaxvelte-pro/User';
+</script>
 
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+<User variant="twotone" color="#718fad" size="45px" axis_x="1px" axis_y="-1px" rotate="{45}" />
 ```
+
+## Icon properties
+
+| Prop      | Type     | Note                                                     |
+| --------- | -------- | -------------------------------------------------------- |
+| `variant` | `string` | "bold", "broken", "bulk", "linear", "outline", "twotone" |
+| `color`   | `string` | "#718fad", "rgba(255,0,0,1)", etc.                       |
+| `size`    | `string` | size="24em", size="24px", size="24rem, etc."             |
+| `axis_x`  | `string` | axis_x="24em", axis_x="24px", etc."                      |
+| `axis_y`  | `string` | axis_x="24em", axis_x="24px", etc."                      |
+| `rotate`  | `number` | 5, -45, 90, 180, etc.                                    |
+
+## Icon list
+
+Isaxvelte-pro covers the entire list of icons [iconsax](https://iconsax.io/), even some additional icons.
+
+| Name                   | Linear | Bold | Broken | Bulk | Outline | Twotone |
+| ---------------------- | ------ | ---- | ------ | ---- | ------- | ------- |
+| Aave                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Activity               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Add                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Addcircle              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Additem                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Addsquare              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Airdrop                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Airplane               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Airplanesquare         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Airpod                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Airpods                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alarm                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alignbottom            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alignhorizontally      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alignleft              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alignright             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Aligntop               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Alignvertically        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Android                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ankr                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Apple                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Aquarius               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archive                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archive1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archive2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archiveadd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archivebook            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archiveminus           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archiveslash           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Archivetick            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrangecircle          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrangecircle2         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrangesquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrangesquare2         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrow                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrow2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrow3                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowbottom            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowcircledown        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowcircleleft        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowcircleright       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowcircleup          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowdown              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowdown1             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowdown2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowleft              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowleft1             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowleft2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowleft3             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowright             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowright1            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowright2            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowright3            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowsquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowsquaredown        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowsquareleft        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowsquareright       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowsquareup          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowswap              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowswaphorizontal    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowup                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowup1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowup2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Arrowup3               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Attachcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Attachsquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Audiosquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Augur                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Autobrightness         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Autonio                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Avalanche              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Award                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backsquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backward               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backward10seconds      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backward15seconds      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backward5seconds       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Backwarditem           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bag                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bag2                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bagcross               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bagcross1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Baghappy               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bagtick                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bagtick2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bagtimer               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bank                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Barcode                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Battery3full           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Batterycharging        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Batterydisable         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Batteryempty           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Batteryempty1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Batteryfull            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Be                     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bezier                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bill                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Binancecoin            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Binanceusd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bitcoin                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bitcoincard            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bitcoinconvert         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bitcoinrefresh         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Blend                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Blend2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Blogger                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bluetooth              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bluetooth2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bluetoothcircle        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bluetoothrectangle     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Blur                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Book                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Book1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bookmark               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bookmark2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Booksaved              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Booksquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bootstrap              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Box                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Box1                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Box2                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Boxadd                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Boxremove              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Boxsearch              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Boxtick                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Boxtime                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Briefcase              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brifecasecross         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brifecasetick          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brifecasetimer         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Broom                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brush                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brush1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brush2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brush3                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Brush4                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bubble                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bucket                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bucketcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bucketsquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Building               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Building3              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Building4              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Buildings              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Buildings2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Buliding               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Bus                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Buycrypto              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cake                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calculator             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendar               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendar1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendar2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendaradd            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendarcircle         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendaredit           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendarremove         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendarsearch         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calendartick           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Call                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calladd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callcalling            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callincoming           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callminus              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Calloutgoing           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callreceived           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Callslash              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Camera                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cameraslash            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Candle                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Candle2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Car                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Card                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardadd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardano                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardcoin               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardedit               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardpos                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardreceive            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardremove1            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cards                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardsend               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardslash              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardtick               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cardtick1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Category               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Category2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cd                     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Celo                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Celsius                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chainlink              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chart                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chart1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chart2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chart21                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chart3                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chartfail              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chartsquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chartsuccess           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Check                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Chrome                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Civic                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboard              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboardclose         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboardexport        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboardimport        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboardtext          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clipboardtick          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clock                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clock1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Closecircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Closesquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloud                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudadd               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudchange            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudconnection        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudcross             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Clouddrizzle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudfog               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudlightning         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudminus             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudnotif             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudplus              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudremove            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudsnow              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cloudsunny             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Code                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Code1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Codecircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Coffee                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Coin                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Coin1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Colorfilter            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Colorssquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Colorswatch            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Command                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Commandsquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Component              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Computing              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Convert                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Convert3dcube          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Convertcard            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Convertshape           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Convertshape2          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Copy                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Copyright              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Copysuccess            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Courthouse             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cpu                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cpucharge              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cpusetting             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Creativecommons        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Crop                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Crown                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Crown1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Css3                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cube3d                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cubescan3d             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Cup                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dai                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Danger                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dash                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Data                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Data2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Decred                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dent                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Designtools            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Devicemessage          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Devices                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Diagram                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Diamonds               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Direct                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directboxdefault       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directboxnotif         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directboxreceive       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directboxsend          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directdown             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directinbox            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directleft             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directnormal           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directnotification     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directright            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directsend             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Directup               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Discountcircle         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Discountshape          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Discover               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Discover1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dislike                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Document               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Document1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentcloud          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentcode           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentcode2          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentcopy           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentdownload       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentfavorite       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentfilter         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentforward        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentlike           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentnormal         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentprevious       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentsketch         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documenttext           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documenttext1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Documentupload         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dollarcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dollarsquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dribbble               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Driver                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Driver2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Driverrefresh          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Driving                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Drop                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Dropbox                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Edit                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Edit2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Educare                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Electricity            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Element1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Element2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Element3               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Element4               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Elementequal           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Elementplus            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emercoin               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emojihappy             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emojinormal            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emojisad               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywallet            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywalletadd         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywalletchange      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywalletremove      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywallettick        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Emptywallettime        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Enjincoin              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Eos                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Eraser                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Eraser1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ethereum               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ethereumclassic        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Export                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Export1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Export2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Export3                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Externaldrive          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Eye                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Eyeslash               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Facebook               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Fatrows                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Favoritechart          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Figma                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Figma1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filter                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filteradd              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filteredit             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filterremove           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filtersearch           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filtersquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Filtertick             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Fingercricle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Fingerscan             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Firstline              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flag                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flag2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flash                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flash1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flashcircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flashcircle1           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Flashslash             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folder                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folder2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folderadd              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Foldercloud            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folderconnection       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Foldercross            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folderfavorite         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folderminus            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Folderopen             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forbidden              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forbidden2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Formatcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Formatsquare           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forward                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forward10seconds       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forward15seconds       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forward5seconds        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forwarditem            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Forwardsquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Framer                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ftxtoken               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gallery                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryadd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryedit            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryexport          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryfavorite        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryimport          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryremove          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Galleryslash           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gallerytick            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Game                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gameboy                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gasstation             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gemini                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gemini2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ghost                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gift                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Glass                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Glass1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Global                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Globaledit             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Globalrefresh          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Globalsearch           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Google                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Googledrive            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Googleplay             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gps                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gpsslash               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grammerly              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Graph                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid3                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid4                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid5                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid6                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid7                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid8                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grid9                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gridedit               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Grideraser             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Gridlock               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Group                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Happyemoji             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Harmony                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hashtag                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hashtag1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hashtagdown            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hashtagup              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Headphone              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Headphones             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Health                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heart                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartadd               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartcircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartedit              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartremove            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartsearch            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Heartslash             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hearttick              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hederahashgraph        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hex                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchy              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchy2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchy3             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchysquare        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchysquare2       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hierarchysquare3       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| History                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Home                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Home1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Home2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Homehashtag            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hometrenddown          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hometrendup            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Homewifi               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Hospital               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| House                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| House2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Html5                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Huobitoken             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Icon                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Illustrator            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Image                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Import                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Import1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Import2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Import3                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Infocircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Information            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Instagram              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Iost                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Javascript             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Js                     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Judge                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Kanban                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Key                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Keyboard               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Keyboardopen           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Keysquare              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Kybernetwork           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lamp                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lamp1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lampcharge             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lampon                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lampslash              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Languagecircle         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Languagesquare         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Layer                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Level                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lifebuoy               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Like                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Like1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Likedislike            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Likeshapes             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Liketag                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Link                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Link1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Link2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Link21                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Linkcircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Linksquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Litecoin               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Location               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Locationadd            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Locationcross          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Locationminus          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Locationslash          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Locationtick           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lock                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lock1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lockcircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lockslash              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Login                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Login1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Logout                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Logout1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Lovely                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Magicpen               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Magicstar              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maincomponent          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maker                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Man                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Map                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Map1                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mask                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mask1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mask2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Math                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize3              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize4              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximize5              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Maximizecircle         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Medal                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Medalstar              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Menu                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Menu1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Menuboard              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Message                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Message2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageadd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageadd1            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagecircle          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageedit            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagefavorite        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageminus           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagenotif           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageprogramming     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagequestion        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messageremove          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messages               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messages1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messages2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messages3              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagesearch          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagesquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagetext            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagetext1           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagetick            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messagetime            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Messenger              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Microphone             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Microphone2            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Microphoneslash        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Microphoneslash1       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Microscope             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Milk                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Minimusicsqaure        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Minus                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Minuscirlce            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Minussquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mirror                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mirroringscreen        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mobile                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mobileprogramming      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Monero                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Money                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Money2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Money3                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Money4                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneyadd               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneychange            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneyforbidden         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneyrecive            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneyremove            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneys                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneysend              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneytick              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moneytime              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Monitor                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Monitormobbile         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Monitorrecorder        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moon                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| More                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| More2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Morecircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Moresquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mouse                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mouse1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mousecircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Mousesquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Music                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musiccircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicdashboard         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicfilter            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musiclibrary2          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicnote              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicplay              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicplaylist          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicsquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicsquareadd         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicsquareremove      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Musicsquaresearch      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Nebulas                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Nem                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Nexo                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Next                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Note                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Note1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Note2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Note3                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Noteadd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notefavorite           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Noteremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notesquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notetext               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notification           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notification1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notificationbing       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notificationcircle     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notificationfavorite   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Notificationstatus     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Oceanprotocol          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Okb                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Omegacircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Omegasquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ontology               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Paintbucket            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Paperclip              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Paperclip2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Passwordcheck          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Path                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Path2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pathsquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pause                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pausecircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Paypal                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Penadd                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Penclose               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Penremove              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pentool                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pentool2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| People                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Percentagecircle       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Percentagesquare       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Personalcard           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pet                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pharagraphspacing      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Photoshop              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Pictureframe           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Play                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Playadd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Playcircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Playcricle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Playremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Point                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Polkadot               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Polygon                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Polyswarm              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Presentionchart        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Previous               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Printer                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Printerslash           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profile                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profile2user           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profileadd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profilecircle          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profiledelete          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profileremove          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Profiletick            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Programmingarrow       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Programmingarrows      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Python                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quant                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quotedown              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quotedowncircle        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quotedownsquare        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quoteup                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quoteupcircle          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Quoteupsquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Radar                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Radar1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Radar2                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Radio                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ram                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ram2                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ranking                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ranking1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receipt                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receipt1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receipt2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receipt21              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptadd             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptdiscount        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptdisscount       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptedit            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptitem            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptminus           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptsearch          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receiptsquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receipttext            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Received               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receivesquare          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Receivesquare2         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Record                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Recordcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Recoveryconvert        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Redo                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refresh                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refresh2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refreshcircle          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refreshleftsquare      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refreshrightsquare     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Refreshsquare2         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Repeat                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Repeatcircle           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Repeatemusic           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Repeateone             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Reserve                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rotate3d               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rotateleft             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rotateleft1            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rotateright            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rotateright1           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Routesquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Routing                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Routing2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rowhorizontal          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rowvertical            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ruler                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Rulerpen               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Safehome               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sagittarius            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Save2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Saveadd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Saveminus              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Saveremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scan                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scanbarcode            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scanner                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scanning               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scissor                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scissor1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Screenmirroring        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Scroll                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchfavorite         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchfavorite1        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchnormal           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchnormal1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchstatus           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchstatus1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchzoomin           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchzoomin1          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchzoomout          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Searchzoomout1         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Security               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Securitycard           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Securitysafe           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Securitytime           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Securityuser           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Send                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Send1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Send2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sendsqaure2            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sendsquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Setting                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Setting2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Setting3               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Setting4               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Setting5               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Settings               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shapes                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shapes1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Share                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shield                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shieldcross            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shieldsearch           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shieldsecurity         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shieldslash            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shieldtick             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ship                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shop                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shopadd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shoppingbag            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shoppingcart           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shopremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Shuffle                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Siacoin                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sidebarbottom          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sidebarleft            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sidebarright           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sidebartop             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Signpost               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Simcard                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Simcard1               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Simcard2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Size                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Slack                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Slash                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Slider                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sliderhorizontal       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sliderhorizontal1      | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Slidervertical         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Slidervertical1        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smallcaps              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smartcar               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smarthome              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smileys                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sms                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smsedit                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smsnotification        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smssearch              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smsstar                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Smstracking            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Snapchat               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Solana                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sort                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sound                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Speaker                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Speedometer            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Spotify                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Square3d               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Squares3               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Stacks                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Star                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Star1                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Starslash              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Status                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Statusup               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Stellar                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sticker                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Stickynote             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Stop                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Stopcircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Story                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Strongbox              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Strongbox2             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Subtitle               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sun                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sun1                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Sunfog                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Support24              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tag                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tag2                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tagcross               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tagright               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Taguser                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Task                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tasksquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Teacher                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tenx                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tether                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Text                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textaligncenter        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textalignjustifycenter | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textalignjustifyleft   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textalignjustifyright  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textalignleft          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textalignright         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textblock              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textbold               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textitalic             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Textunderline          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Thegraph               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Theta                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Thorchain              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tickcircle             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticket                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticket2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticketdiscount         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticketexpired          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticketstar             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ticksquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Timer                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Timer1                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Timerpause             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Timerstart             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Toggleoff              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Toggleoffcircle        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Toggleon               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Toggleoncircle         | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trade                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Transactionminus       | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Translate              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trash                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Tree                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trello                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trenddown              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trendup                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Triangle               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Triangle2              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trontron               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Truck                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Truckfast              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Truckremove            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trucktick              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trucktime              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Trushsquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Twitch                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Ui8                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Undo                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Unlimited              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Unlock                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usdcoin                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| User                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Useradd                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usercirlceadd          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Useredit               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Userminus              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Useroctagon            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Userremove             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usersearch             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usersquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usertag                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Usertick               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Velas                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Verify                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Vibe                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Video                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videoadd               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videocircle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videohorizontal        | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videooctagon           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videoplay              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videoremove            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videoslash             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videosquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videotick              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videotime              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Videovertical          | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Voicecricle            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Voicesquare            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volume                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumecross            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumehigh             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumelow              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumelow1             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumemute             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumeslash            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Volumeup               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Vuesax                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wallet                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wallet1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wallet2                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wallet3                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletadd              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletadd1             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletcheck            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletminus            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletmoney            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletremove           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Walletsearch           | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wanchain               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wanchain1              | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Warning2               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Watch                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Watchstatus            | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Weight                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Weight1                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Whatsapp               | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wifi                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wifisquare             | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wind                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wind2                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Windows                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Wing                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Woman                  | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Xd                     | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Xiaomi                 | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Xrp                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Youtube                | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Zel                    | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+| Zoom                   | ✅     | ✅   | ✅     | ✅   | ✅      | ✅      |
+
+## Do you like this contribution?
+
+You can support this Github project through donation.
+
+<a href='https://ko-fi.com/rubenmach' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+## License
+
+[MIT](LICENSE)
